@@ -1,7 +1,6 @@
 language: objective-c
 osx_image: xcode8.2
+install: fastlane setup
 script: fastlane test
-before_install:
-  - gem install cocoapods -v '1.2.0'
 after_success:
   - bash <(curl -s https://codecov.io/bash) -t 5213f787-a183-4804-8284-bcd7e79b0f7b

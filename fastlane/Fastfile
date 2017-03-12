@@ -8,6 +8,11 @@ platform :ios do
   end
 
   ######################### PUBLIC LANES ##########################
+  desc "Getting started with the project and ready to develop"
+  lane :setup do
+    cocoapods(repo_update: true)
+  end
+
   desc "Runs all the unit and ui tests"
   lane :test do |options|
     configuration = options[:configuration] || ENV["CONFIG_DEV"]
