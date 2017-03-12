@@ -79,13 +79,13 @@
 		A804F5491E75761B00990655 /* Monumap */ = {
 			isa = PBXGroup;
 			children = (
-				A804F54A1E75761B00990655 /* AppDelegate.swift */,
-				A804F54C1E75761B00990655 /* FirstViewController.swift */,
-				A804F54E1E75761B00990655 /* SecondViewController.swift */,
-				A804F5501E75761B00990655 /* Main.storyboard */,
-				A804F5531E75761C00990655 /* Assets.xcassets */,
-				A804F5551E75761C00990655 /* LaunchScreen.storyboard */,
-				A804F5581E75761C00990655 /* Info.plist */,
+				A855B0811E75835E0084D17C /* App */,
+				A855B0871E7583A60084D17C /* Resources */,
+				A855B0821E7583670084D17C /* Storyboards */,
+				A855B0831E7583760084D17C /* ViewControllers */,
+				A855B0861E7583990084D17C /* ViewModels */,
+				A855B0841E7583860084D17C /* Views */,
+				A855B0851E75838C0084D17C /* Wireframes */,
 			);
 			path = Monumap;
 			sourceTree = "<group>";
@@ -93,10 +93,82 @@
 		A804F5601E75761C00990655 /* MonumapTests */ = {
 			isa = PBXGroup;
 			children = (
+				A855B0881E7583D80084D17C /* Supporting Files */,
 				A804F5611E75761C00990655 /* MonumapTests.swift */,
-				A804F5631E75761C00990655 /* Info.plist */,
 			);
 			path = MonumapTests;
+			sourceTree = "<group>";
+		};
+		A855B0811E75835E0084D17C /* App */ = {
+			isa = PBXGroup;
+			children = (
+				A804F54A1E75761B00990655 /* AppDelegate.swift */,
+			);
+			name = App;
+			path = App;
+			sourceTree = "<group>";
+		};
+		A855B0821E7583670084D17C /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				A804F5551E75761C00990655 /* LaunchScreen.storyboard */,
+				A804F5501E75761B00990655 /* Main.storyboard */,
+			);
+			name = Storyboards;
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		A855B0831E7583760084D17C /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				A804F54C1E75761B00990655 /* FirstViewController.swift */,
+				A804F54E1E75761B00990655 /* SecondViewController.swift */,
+			);
+			name = ViewControllers;
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		A855B0841E7583860084D17C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A855B0851E75838C0084D17C /* Wireframes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Wireframes;
+			path = Wireframes;
+			sourceTree = "<group>";
+		};
+		A855B0861E7583990084D17C /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = ViewModels;
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		A855B0871E7583A60084D17C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A804F5531E75761C00990655 /* Assets.xcassets */,
+				A804F5581E75761C00990655 /* Info.plist */,
+			);
+			name = Resources;
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		A855B0881E7583D80084D17C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A804F5631E75761C00990655 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -235,6 +307,7 @@
 				A804F5511E75761B00990655 /* Base */,
 			);
 			name = Main.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 		A804F5551E75761C00990655 /* LaunchScreen.storyboard */ = {
@@ -243,6 +316,7 @@
 				A804F5561E75761C00990655 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -346,7 +420,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = C8WJM3UR8V;
-				INFOPLIST_FILE = Monumap/Info.plist;
+				INFOPLIST_FILE = Monumap/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.monumap.Monumap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -359,7 +434,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = C8WJM3UR8V;
-				INFOPLIST_FILE = Monumap/Info.plist;
+				INFOPLIST_FILE = Monumap/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.monumap.Monumap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -373,7 +449,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = C8WJM3UR8V;
-				INFOPLIST_FILE = MonumapTests/Info.plist;
+				INFOPLIST_FILE = "MonumapTests/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.monumap.MonumapTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -388,7 +464,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = C8WJM3UR8V;
-				INFOPLIST_FILE = MonumapTests/Info.plist;
+				INFOPLIST_FILE = "MonumapTests/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.monumap.MonumapTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -416,6 +492,7 @@
 				A804F5681E75761C00990655 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A804F5691E75761C00990655 /* Build configuration list for PBXNativeTarget "MonumapTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +501,7 @@
 				A804F56B1E75761C00990655 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
