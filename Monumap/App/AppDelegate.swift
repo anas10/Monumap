@@ -8,14 +8,17 @@
 
 import UIKit
 
-@UIApplicationMain
+// This is commented as we now use the main.swift instead
+//@UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+
+        window?.rootViewController = TabBarWireframe().instantiateTabBarController()
+
         return true
     }
 
