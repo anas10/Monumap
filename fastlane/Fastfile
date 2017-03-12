@@ -1,0 +1,69 @@
+fastlane_version "2.15.0"
+
+default_platform :ios
+
+platform :ios do
+  ############################## PRE ##############################
+  before_all do
+  end
+
+  ######################### PUBLIC LANES ##########################
+  desc "Runs all the unit and ui tests"
+  lane :test do |options|
+    configuration = options[:configuration] || ENV["CONFIG_DEV"]
+    scan(
+      scheme: ENV['SCHEME'],
+      configuration: configuration
+    )
+  end
+
+  desc "Updates the storyboard identifier Swift values."
+  lane :storyboard_ids do
+    sh "cd .. ; bundle exec sbconstants 'Monumap/Storyboards/StoryboardIdentifiers.swift' --source-dir 'Monumap/Storyboards' --swift"
+  end
+
+  desc "Reorganizes the Xcode project folder to match Xcode groups"
+  lane :reorganize do
+    sh "cd .. ; bundle exec synx 'Monumap.xcodeproj'"
+  end
+  ######################### PRIVATE LANES #########################
+  desc "Build the app"
+  private_lane :build_app do |options|
+    configuration = options[:configuration]
+    scheme = ENV['SCHEME']
+    ipa_name = "#{scheme}-#{configuration}-v#{get_version_number}(#{get_build_number}).ipa"
+    gym(
+      scheme: scheme,
+      output_directory: "./fastlane/ipa",
+      configuration: configuration,
+      silent: true,
+      output_name: ipa_name,
+      suppress_xcode_output: true
+    )
+  end
+
+  desc "Increment the build and version number"
+  private_lane :increment_target do
+    increment_build_number
+    increment_version_number(version_number: ENV['TARGET_VERSION'])
+  end
+
+  desc "Commit the version and add a git tag"
+  private_lane :commit_version do 
+    version_number = get_version_number
+    build_number = get_build_number
+    commit_version_bump(message: "Deploying version #{version_number}(#{build_number})")
+    add_git_tag(prefix: "v#{version_number}-")
+    push_to_git_remote
+  end
+
+  ############################# POST ##############################
+
+  after_all do |lane|
+    notification(message: "Fastlane finished '#{lane}' successfully") # Mac OS X Notification
+  end
+
+  error do |lane, exception|
+    notification(message: "Fastlane '#{lane}' errored") # Mac OS X Notification
+  end
+end
