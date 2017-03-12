@@ -1,5 +1,10 @@
 # Monumap
 
+Branch | Build | Coverage |
+:-----:|:-----:|:---------:
+Master | [![Build Status](https://travis-ci.org/anas10/Monumap.svg?branch=master)](https://travis-ci.org/anas10/Monumap) | [![codecov](https://codecov.io/gh/anas10/Monumap/branch/master/graph/badge.svg)](https://codecov.io/gh/anas10/Monumap)
+Develop | [![Build Status](https://travis-ci.org/anas10/Monumap.svg?branch=develop)](https://travis-ci.org/anas10/Monumap) | [![codecov](https://codecov.io/gh/anas10/Monumap/branch/develop/graph/badge.svg)](https://codecov.io/gh/anas10/Monumap)
+
 iOS App around world heritage monuments listed by the UNESCO
 
 ## Requirements
