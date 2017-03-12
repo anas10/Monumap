@@ -1,6 +1,8 @@
 language: objective-c
 osx_image: xcode8.2
-install: fastlane setup
+install: 
+  - bundle install --jobs=3 --retry=3 --deployment
+  - fastlane setup
 script: fastlane test
 after_success:
   - bash <(curl -s https://codecov.io/bash) -t 5213f787-a183-4804-8284-bcd7e79b0f7b
