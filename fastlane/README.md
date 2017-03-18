@@ -29,6 +29,11 @@ xcode-select --install
 </table>
 # Available Actions
 ## iOS
+### ios setup
+```
+fastlane ios setup
+```
+Getting started with the project and ready to develop
 ### ios test
 ```
 fastlane ios test

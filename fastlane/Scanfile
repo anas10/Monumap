@@ -12,6 +12,6 @@ code_coverage true
 
 skip_slack true
 
-devices ['iPad Air', 'iPhone 6']
+devices ['iPhone 6']
 
 output_types 'html'
