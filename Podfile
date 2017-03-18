@@ -6,10 +6,15 @@ inhibit_all_warnings!
 
 target 'Monumap' do
 
+    pod 'RxSwift'
+    pod 'RxCocoa'
+
     target 'MonumapTests' do
         inherit! :search_paths
 
         pod 'Quick'
         pod 'Nimble'
+        pod 'Nimble-Snapshots/DynamicSize'
+
     end
 end

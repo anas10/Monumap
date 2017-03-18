@@ -27,6 +27,12 @@
 		A855B0A71E75C9FB0084D17C /* MapWireframeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A855B0A61E75C9FB0084D17C /* MapWireframeTests.swift */; };
 		A855B0A91E75CAE70084D17C /* SearchWireframeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A855B0A81E75CAE70084D17C /* SearchWireframeTests.swift */; };
 		A855B0AB1E75CB2F0084D17C /* SearchWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = A855B0AA1E75CB2F0084D17C /* SearchWireframe.swift */; };
+		A85CDDB61E7D92FA00F60A45 /* NearbyViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85CDDB51E7D92FA00F60A45 /* NearbyViewControllerTests.swift */; };
+		A8762E2D1E7B2131007F99E3 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8762E2C1E7B2131007F99E3 /* MapKit.framework */; };
+		A8DFDC691E7B34D800B14F47 /* Lora-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A8DFDC681E7B34D800B14F47 /* Lora-Bold.ttf */; };
+		A8DFDC6B1E7B364100B14F47 /* Montserrat-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A8DFDC6A1E7B364100B14F47 /* Montserrat-SemiBold.ttf */; };
+		A8DFDC6D1E7B405800B14F47 /* Montserrat-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A8DFDC6C1E7B405800B14F47 /* Montserrat-Medium.ttf */; };
+		A8DFDC6F1E7B457300B14F47 /* placeholder-image.png in Resources */ = {isa = PBXBuildFile; fileRef = A8DFDC6E1E7B457300B14F47 /* placeholder-image.png */; };
 		EFF065C69F70D4CA5A9E53C9 /* Pods_Monumap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41018ED8D8A3D881C33237BD /* Pods_Monumap.framework */; };
 /* End PBXBuildFile section */
 
@@ -68,6 +74,12 @@
 		A855B0A61E75C9FB0084D17C /* MapWireframeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapWireframeTests.swift; sourceTree = "<group>"; };
 		A855B0A81E75CAE70084D17C /* SearchWireframeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchWireframeTests.swift; sourceTree = "<group>"; };
 		A855B0AA1E75CB2F0084D17C /* SearchWireframe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchWireframe.swift; sourceTree = "<group>"; };
+		A85CDDB51E7D92FA00F60A45 /* NearbyViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NearbyViewControllerTests.swift; path = MonumapTests/NearbyViewControllerTests.swift; sourceTree = SOURCE_ROOT; };
+		A8762E2C1E7B2131007F99E3 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		A8DFDC681E7B34D800B14F47 /* Lora-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lora-Bold.ttf"; sourceTree = "<group>"; };
+		A8DFDC6A1E7B364100B14F47 /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.ttf"; sourceTree = "<group>"; };
+		A8DFDC6C1E7B405800B14F47 /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.ttf"; sourceTree = "<group>"; };
+		A8DFDC6E1E7B457300B14F47 /* placeholder-image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "placeholder-image.png"; sourceTree = "<group>"; };
 		D15A1B6B61D78F452AA2CA17 /* Pods-MonumapTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MonumapTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MonumapTests/Pods-MonumapTests.release.xcconfig"; sourceTree = "<group>"; };
 		FD2807D6908F8C57EFE10B58 /* Pods-Monumap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Monumap.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Monumap/Pods-Monumap.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -77,6 +89,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8762E2D1E7B2131007F99E3 /* MapKit.framework in Frameworks */,
 				EFF065C69F70D4CA5A9E53C9 /* Pods_Monumap.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -206,6 +219,10 @@
 		A855B0871E7583A60084D17C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				A8DFDC6E1E7B457300B14F47 /* placeholder-image.png */,
+				A8DFDC6C1E7B405800B14F47 /* Montserrat-Medium.ttf */,
+				A8DFDC6A1E7B364100B14F47 /* Montserrat-SemiBold.ttf */,
+				A8DFDC681E7B34D800B14F47 /* Lora-Bold.ttf */,
 				A804F5531E75761C00990655 /* Assets.xcassets */,
 				A804F5581E75761C00990655 /* Info.plist */,
 			);
@@ -223,6 +240,7 @@
 		A855B08F1E758E140084D17C /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				A85CDDB51E7D92FA00F60A45 /* NearbyViewControllerTests.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -249,6 +267,7 @@
 		C74F13C076CEF5C8E3A0FB2C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A8762E2C1E7B2131007F99E3 /* MapKit.framework */,
 				41018ED8D8A3D881C33237BD /* Pods_Monumap.framework */,
 				41A782711B021A5DCBE91ECB /* Pods_MonumapTests.framework */,
 			);
@@ -347,8 +366,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				A804F5571E75761C00990655 /* LaunchScreen.storyboard in Resources */,
+				A8DFDC691E7B34D800B14F47 /* Lora-Bold.ttf in Resources */,
 				A804F5541E75761C00990655 /* Assets.xcassets in Resources */,
+				A8DFDC6F1E7B457300B14F47 /* placeholder-image.png in Resources */,
 				A804F5521E75761B00990655 /* Main.storyboard in Resources */,
+				A8DFDC6D1E7B405800B14F47 /* Montserrat-Medium.ttf in Resources */,
+				A8DFDC6B1E7B364100B14F47 /* Montserrat-SemiBold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -478,6 +501,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A855B0931E758FEE0084D17C /* TabBarWireframeTests.swift in Sources */,
+				A85CDDB61E7D92FA00F60A45 /* NearbyViewControllerTests.swift in Sources */,
 				A855B0A71E75C9FB0084D17C /* MapWireframeTests.swift in Sources */,
 				A855B0A91E75CAE70084D17C /* SearchWireframeTests.swift in Sources */,
 				A855B09A1E75B30C0084D17C /* AppDelegateTests.swift in Sources */,
