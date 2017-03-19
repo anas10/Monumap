@@ -19,7 +19,9 @@ class TabBarWireframeTests: QuickSpec {
         describe("TabBarWireframe") { 
 
             beforeEach {
-                tabBarWireframe = TabBarWireframe()
+                tabBarWireframe = TabBarWireframe(
+                    provider: Networking.newStubbingNetworking()
+                )
             }
 
             context("when instantiating") {

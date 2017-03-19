@@ -77,7 +77,7 @@
                                             <inset key="sectionInset" minX="16" minY="0.0" maxX="16" maxY="0.0"/>
                                         </collectionViewFlowLayout>
                                         <cells>
-                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="siteCellIdentifier" id="ROo-FB-O2d">
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="siteCellIdentifier" id="ROo-FB-O2d" customClass="MonumentCollectionViewCell" customModule="Monumap" customModuleProvider="target">
                                                 <rect key="frame" x="16" y="11" width="200" height="275"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -127,6 +127,12 @@
                                                     <constraint firstAttribute="trailing" secondItem="VFt-E0-v2L" secondAttribute="trailing" id="mIH-XT-TNP"/>
                                                     <constraint firstAttribute="trailing" secondItem="27T-zc-P6l" secondAttribute="trailing" id="nO8-aB-ZhA"/>
                                                 </constraints>
+                                                <connections>
+                                                    <outlet property="dateInscribed" destination="27T-zc-P6l" id="Gnh-Mq-uyu"/>
+                                                    <outlet property="image" destination="VFt-E0-v2L" id="FPD-0Y-cVQ"/>
+                                                    <outlet property="location" destination="MFv-xr-zjl" id="AOf-Th-4ET"/>
+                                                    <outlet property="site" destination="xPJ-Zn-pVk" id="Sql-Zw-tLj"/>
+                                                </connections>
                                             </collectionViewCell>
                                         </cells>
                                     </collectionView>

@@ -19,7 +19,9 @@ class NearbyWireframeTests: QuickSpec {
         describe("NearbyWireframe") {
 
             beforeEach {
-                nearbyWireframe = NearbyWireframe()
+                nearbyWireframe = NearbyWireframe(
+                    provider: Networking.newStubbingNetworking()
+                )
             }
 
             context("when initialised") {

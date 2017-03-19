@@ -12,21 +12,24 @@ import Nimble_Snapshots
 
 @testable import Monumap
 
+let sizes = [
+    "iPhone5Portrait" : CGSize(width: 320, height: 568),
+    "iPhonePlusPortrait" : CGSize(width: 414, height: 736),
+    "iPadPortrait" : CGSize(width: 768, height: 1024),
+    "iPadLandscape" : CGSize(width: 1024, height: 768)
+]
+
 class NearbyViewControllerTests: QuickSpec {
 
     override func spec() {
         var nearbyVC: NearbyViewController!
 
-        let sizes = [
-            "iPhone5Portrait" : CGSize(width: 320, height: 568),
-            "iPhonePlusPortrait" : CGSize(width: 414, height: 736),
-            "iPadPortrait" : CGSize(width: 768, height: 1024),
-            "iPadLandscape" : CGSize(width: 1024, height: 768)
-        ]
-
         describe("NearbyViewController") { 
             beforeEach {
                 nearbyVC = UIStoryboard.main().viewControllerWithID(.nearbyViewControllerID) as! NearbyViewController
+                nearbyVC.viewModelConstructor = { _ in
+                    NearbyViewModel(provider: Networking.newStubbingNetworking())
+                }
                 _ = nearbyVC.view
             }
 
@@ -42,12 +45,3 @@ class NearbyViewControllerTests: QuickSpec {
     }
     
 }
-
-extension UIViewController {
-
-    func loadViewProgrammatically(){
-        self.beginAppearanceTransition(true, animated: false)
-        self.endAppearanceTransition()
-    }
-}
-

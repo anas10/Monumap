@@ -9,16 +9,25 @@
 import UIKit
 
 protocol TabBarWireframeType {
+    var provider : Networking { get }
+
+    init(provider: Networking)
+
     func instantiateTabBarController() -> UITabBarController
 }
 
 class TabBarWireframe: TabBarWireframeType {
+    let provider : Networking
+
+    required init(provider: Networking) {
+        self.provider = provider
+    }
 
     func instantiateTabBarController() -> UITabBarController {
         let tabBarController = UITabBarController()
 
         tabBarController.viewControllers  = [
-            NearbyWireframe().instantiateInitialViewController(),
+            NearbyWireframe(provider: self.provider).instantiateInitialViewController(),
             MapWireframe().instantiateInitialViewController(),
             SearchWireframe().instantiateInitialViewController()
         ]

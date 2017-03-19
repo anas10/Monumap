@@ -14,17 +14,22 @@ class NearbyViewController: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
 
+    var viewModel: NearbyViewModel!
+    var viewModelConstructor: NearbyViewModelConstructorType!
+
     private var disposeBag = DisposeBag()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let items = Observable.just([1, 2, 3])
+        viewModel = viewModelConstructor(self)
 
-        items
+        viewModel
+            .getMonuments()
             .bindTo(collectionView.rx.items) { (collectionView, row, element) in
                 let indexPath = IndexPath(row: row, section: 0)
-                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "siteCellIdentifier", for: indexPath)
+                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "siteCellIdentifier", for: indexPath) as! MonumentCollectionViewCell
+                cell.configure(monument: element)
                 return cell
             }
             .disposed(by: disposeBag)

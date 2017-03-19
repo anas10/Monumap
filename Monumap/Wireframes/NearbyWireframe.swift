@@ -8,23 +8,29 @@
 
 import UIKit
 
+typealias NearbyViewModelConstructorType = (NearbyViewController) -> (NearbyViewModel)
+
 protocol NearbyWireframeType {
     var storyboard : UIStoryboard! { get }
+    var provider: Networking { get }
 
-    init(storyboard: UIStoryboard)
+    init(storyboard: UIStoryboard, provider: Networking)
 
     func instantiateInitialViewController() -> NearbyViewController
 }
 
 class NearbyWireframe: NearbyWireframeType {
-
     let storyboard: UIStoryboard!
+    let provider : Networking
 
-    required init(storyboard: UIStoryboard = UIStoryboard.main()) {
+    required init(storyboard: UIStoryboard = UIStoryboard.main(), provider: Networking) {
         self.storyboard = storyboard
+        self.provider = provider
     }
 
     func instantiateInitialViewController() -> NearbyViewController {
-        return self.storyboard.viewControllerWithID(.nearbyViewControllerID) as! NearbyViewController
+        let vc = self.storyboard.viewControllerWithID(.nearbyViewControllerID) as! NearbyViewController
+        vc.viewModelConstructor = { _ in NearbyViewModel(provider: self.provider) }
+        return vc
     }
 }
