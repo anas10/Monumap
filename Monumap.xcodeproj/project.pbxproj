@@ -12,6 +12,8 @@
 		A804F5521E75761B00990655 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A804F5501E75761B00990655 /* Main.storyboard */; };
 		A804F5541E75761C00990655 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A804F5531E75761C00990655 /* Assets.xcassets */; };
 		A804F5571E75761C00990655 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A804F5551E75761C00990655 /* LaunchScreen.storyboard */; };
+		A823FCE31E8865000037F2DB /* MonumentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A823FCE21E8865000037F2DB /* MonumentTests.swift */; };
+		A823FCE51E8867330037F2DB /* MonumentAnnotationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A823FCE41E8867330037F2DB /* MonumentAnnotationTests.swift */; };
 		A855B08A1E758CCA0084D17C /* NearbyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A855B0891E758CCA0084D17C /* NearbyViewController.swift */; };
 		A855B08C1E758D990084D17C /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A855B08B1E758D990084D17C /* MapViewController.swift */; };
 		A855B08E1E758DE00084D17C /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A855B08D1E758DE00084D17C /* SearchViewController.swift */; };
@@ -51,6 +53,9 @@
 		A85CDDEF1E7F7AF600F60A45 /* FakeObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85CDDEE1E7F7AF600F60A45 /* FakeObjects.swift */; };
 		A85CDDF11E7F7B2B00F60A45 /* Monument+FakeObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85CDDF01E7F7B2B00F60A45 /* Monument+FakeObjects.swift */; };
 		A8762E2D1E7B2131007F99E3 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8762E2C1E7B2131007F99E3 /* MapKit.framework */; };
+		A88BB99E1E881AD900B443D2 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88BB99D1E881AD900B443D2 /* DataManager.swift */; };
+		A88BB9A01E881B1E00B443D2 /* DataManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88BB99F1E881B1E00B443D2 /* DataManagerTests.swift */; };
+		A88BB9A31E88353D00B443D2 /* MonumentAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88BB9A21E88353D00B443D2 /* MonumentAnnotation.swift */; };
 		A8DFDC691E7B34D800B14F47 /* Lora-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A8DFDC681E7B34D800B14F47 /* Lora-Bold.ttf */; };
 		A8DFDC6B1E7B364100B14F47 /* Montserrat-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A8DFDC6A1E7B364100B14F47 /* Montserrat-SemiBold.ttf */; };
 		A8DFDC6D1E7B405800B14F47 /* Montserrat-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A8DFDC6C1E7B405800B14F47 /* Montserrat-Medium.ttf */; };
@@ -81,6 +86,8 @@
 		A804F5581E75761C00990655 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A804F55D1E75761C00990655 /* MonumapTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MonumapTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A804F5631E75761C00990655 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A823FCE21E8865000037F2DB /* MonumentTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MonumentTests.swift; path = MonumapTests/Network/MonumentTests.swift; sourceTree = SOURCE_ROOT; };
+		A823FCE41E8867330037F2DB /* MonumentAnnotationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MonumentAnnotationTests.swift; path = Views/MonumentAnnotationTests.swift; sourceTree = "<group>"; };
 		A855B0891E758CCA0084D17C /* NearbyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NearbyViewController.swift; sourceTree = "<group>"; };
 		A855B08B1E758D990084D17C /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		A855B08D1E758DE00084D17C /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
@@ -120,6 +127,9 @@
 		A85CDDEE1E7F7AF600F60A45 /* FakeObjects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FakeObjects.swift; path = Fakes/FakeObjects.swift; sourceTree = "<group>"; };
 		A85CDDF01E7F7B2B00F60A45 /* Monument+FakeObjects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Monument+FakeObjects.swift"; path = "Fakes/Monument+FakeObjects.swift"; sourceTree = "<group>"; };
 		A8762E2C1E7B2131007F99E3 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		A88BB99D1E881AD900B443D2 /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		A88BB99F1E881B1E00B443D2 /* DataManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManagerTests.swift; sourceTree = "<group>"; };
+		A88BB9A21E88353D00B443D2 /* MonumentAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonumentAnnotation.swift; sourceTree = "<group>"; };
 		A8DFDC681E7B34D800B14F47 /* Lora-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lora-Bold.ttf"; sourceTree = "<group>"; };
 		A8DFDC6A1E7B364100B14F47 /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.ttf"; sourceTree = "<group>"; };
 		A8DFDC6C1E7B405800B14F47 /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.ttf"; sourceTree = "<group>"; };
@@ -216,6 +226,7 @@
 			children = (
 				A804F54A1E75761B00990655 /* AppDelegate.swift */,
 				A855B0971E75B1240084D17C /* main.swift */,
+				A88BB99D1E881AD900B443D2 /* DataManager.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -245,6 +256,7 @@
 			isa = PBXGroup;
 			children = (
 				A85CDDE41E7F23D700F60A45 /* MonumentCollectionViewCell.swift */,
+				A88BB9A21E88353D00B443D2 /* MonumentAnnotation.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -314,6 +326,7 @@
 			isa = PBXGroup;
 			children = (
 				A855B0991E75B30C0084D17C /* AppDelegateTests.swift */,
+				A88BB99F1E881B1E00B443D2 /* DataManagerTests.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -372,6 +385,7 @@
 		A85CDDCE1E7EE7D500F60A45 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				A823FCE21E8865000037F2DB /* MonumentTests.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -405,6 +419,7 @@
 			isa = PBXGroup;
 			children = (
 				A85CDDEB1E7F2C7700F60A45 /* MonumentCollectionViewCellTests.swift */,
+				A823FCE41E8867330037F2DB /* MonumentAnnotationTests.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -656,7 +671,9 @@
 				A85CDDC41E7ECF3400F60A45 /* NearbyViewModel.swift in Sources */,
 				A855B08C1E758D990084D17C /* MapViewController.swift in Sources */,
 				A85CDDE51E7F23D700F60A45 /* MonumentCollectionViewCell.swift in Sources */,
+				A88BB99E1E881AD900B443D2 /* DataManager.swift in Sources */,
 				A85CDDBF1E7E1FDD00F60A45 /* MonumapConfiguration.swift in Sources */,
+				A88BB9A31E88353D00B443D2 /* MonumentAnnotation.swift in Sources */,
 				A85CDDC71E7EDF5F00F60A45 /* Monument.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -668,10 +685,13 @@
 				A855B0931E758FEE0084D17C /* TabBarWireframeTests.swift in Sources */,
 				A85CDDE31E7F0FEC00F60A45 /* Observable+JSONSerializableTests.swift in Sources */,
 				A85CDDDC1E7F050B00F60A45 /* NearbyViewModelTests.swift in Sources */,
+				A823FCE31E8865000037F2DB /* MonumentTests.swift in Sources */,
 				A85CDDF11E7F7B2B00F60A45 /* Monument+FakeObjects.swift in Sources */,
 				A85CDDB61E7D92FA00F60A45 /* NearbyViewControllerTests.swift in Sources */,
 				A85CDDD51E7EEEEF00F60A45 /* APIUtilsTests.swift in Sources */,
 				A85CDDDF1E7F073C00F60A45 /* MonumentsStubProvider.swift in Sources */,
+				A88BB9A01E881B1E00B443D2 /* DataManagerTests.swift in Sources */,
+				A823FCE51E8867330037F2DB /* MonumentAnnotationTests.swift in Sources */,
 				A85CDDEC1E7F2C7700F60A45 /* MonumentCollectionViewCellTests.swift in Sources */,
 				A85CDDD31E7EED8E00F60A45 /* JSONSerializableTests.swift in Sources */,
 				A855B0A71E75C9FB0084D17C /* MapWireframeTests.swift in Sources */,

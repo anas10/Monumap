@@ -28,7 +28,7 @@ class NearbyViewControllerTests: QuickSpec {
             beforeEach {
                 nearbyVC = UIStoryboard.main().viewControllerWithID(.nearbyViewControllerID) as! NearbyViewController
                 nearbyVC.viewModelConstructor = { _ in
-                    NearbyViewModel(provider: Networking.newStubbingNetworking())
+                    NearbyViewModelTests.testSubject()
                 }
                 _ = nearbyVC.view
             }

@@ -16,7 +16,7 @@ protocol NearbyWireframeType {
 
     init(storyboard: UIStoryboard, provider: Networking)
 
-    func instantiateInitialViewController() -> NearbyViewController
+    func instantiateInitialViewController(dataManager: DataManager) -> NearbyViewController
 }
 
 class NearbyWireframe: NearbyWireframeType {
@@ -28,9 +28,11 @@ class NearbyWireframe: NearbyWireframeType {
         self.provider = provider
     }
 
-    func instantiateInitialViewController() -> NearbyViewController {
+    func instantiateInitialViewController(dataManager: DataManager) -> NearbyViewController {
         let vc = self.storyboard.viewControllerWithID(.nearbyViewControllerID) as! NearbyViewController
-        vc.viewModelConstructor = { _ in NearbyViewModel(provider: self.provider) }
+        vc.viewModelConstructor = { _ in
+            NearbyViewModel(provider: self.provider, dataManager: dataManager)
+        }
         return vc
     }
 }

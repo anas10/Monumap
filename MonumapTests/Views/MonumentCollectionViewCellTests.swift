@@ -23,7 +23,7 @@ class MonumentCollectionViewCellTests: QuickSpec {
                 let vc = UIStoryboard.main()
                     .viewControllerWithID(.nearbyViewControllerID) as! NearbyViewController
                 vc.viewModelConstructor = { _ in
-                    NearbyViewModel(provider: Networking.newStubbingNetworking())
+                    NearbyViewModelTests.testSubject()
                 }
                 _ = vc.view
 

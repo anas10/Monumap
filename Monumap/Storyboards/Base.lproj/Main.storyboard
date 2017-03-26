@@ -150,6 +150,7 @@
                     <tabBarItem key="tabBarItem" title="NEARBY" image="icnMenuNearby" id="acW-dT-cKf"/>
                     <connections>
                         <outlet property="collectionView" destination="aga-NG-86a" id="t4x-6a-lsv"/>
+                        <outlet property="mapView" destination="MQF-vH-DAz" id="AaM-78-ny1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>

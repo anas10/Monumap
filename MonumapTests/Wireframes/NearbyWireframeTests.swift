@@ -32,7 +32,8 @@ class NearbyWireframeTests: QuickSpec {
 
             context("when instantiating") {
                 it("it returns the right initial view controller") {
-                    let subject = nearbyWireframe.instantiateInitialViewController()
+                    let subject = nearbyWireframe
+                        .instantiateInitialViewController(dataManager: DataManager())
 
                     expect(subject).to(beAKindOf(NearbyViewController.self))
                     expect(subject.tabBarItem.title) == "NEARBY"

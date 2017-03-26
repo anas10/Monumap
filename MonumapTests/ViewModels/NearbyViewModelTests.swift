@@ -32,7 +32,7 @@ class NearbyViewModelTests: QuickSpec {
                         monumentsSucceed: true,
                         monumentsCheck: {checked = true}
                     )
-                    let subject = self.testSubject(provider: networking)
+                    let subject = NearbyViewModelTests.testSubject(provider: networking)
 
                     subject
                         .getMonuments()
@@ -41,7 +41,27 @@ class NearbyViewModelTests: QuickSpec {
                         }).addDisposableTo(disposeBag)
 
                     expect(checked).to(beTrue())
-                    expect(monuments.count).to(beGreaterThan(0))
+                    expect(monuments.count) >= 0
+                }
+
+                it("set monuments in datamanager correctly") {
+                    let dataManager = DataManager()
+                    let subject = NearbyViewModelTests.testSubject(dataManager: dataManager)
+
+                    subject
+                        .getMonuments()
+                        .subscribe()
+                        .addDisposableTo(disposeBag)
+
+                    let count = dataManager.monuments.value.count
+                    expect(count) >= 0
+
+                    subject
+                        .getMonuments()
+                        .subscribe()
+                        .addDisposableTo(disposeBag)
+
+                    expect(dataManager.monuments.value.count) == count
                 }
 
                 it("sends an error if request fails") {
@@ -50,7 +70,7 @@ class NearbyViewModelTests: QuickSpec {
                         monumentsSucceed: false,
                         monumentsCheck: {checked = true}
                     )
-                    let subject = self.testSubject(provider: networking)
+                    let subject = NearbyViewModelTests.testSubject(provider: networking)
 
                     var errored = false
                     subject
@@ -69,8 +89,10 @@ class NearbyViewModelTests: QuickSpec {
 }
 
 extension NearbyViewModelTests {
-    func testSubject(provider: Networking = Networking.newStubbingNetworking()
+    static func testSubject(
+        provider: Networking = Networking.newStubbingNetworking(),
+        dataManager: DataManager = DataManager()
         ) -> NearbyViewModel {
-        return NearbyViewModel(provider: provider)
+        return NearbyViewModel(provider: provider, dataManager: dataManager)
     }
 }

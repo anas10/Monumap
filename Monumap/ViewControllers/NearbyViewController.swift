@@ -9,10 +9,12 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import MapKit
 
 class NearbyViewController: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var mapView: MKMapView!
 
     var viewModel: NearbyViewModel!
     var viewModelConstructor: NearbyViewModelConstructorType!
@@ -24,8 +26,15 @@ class NearbyViewController: UIViewController {
 
         viewModel = viewModelConstructor(self)
 
+        mapView.delegate = self
+
+        // Fetch the monuments
+        viewModel.getMonuments().subscribe().addDisposableTo(disposeBag)
+
         viewModel
-            .getMonuments()
+            .dataManager
+            .monuments
+            .asObservable()
             .bindTo(collectionView.rx.items) { (collectionView, row, element) in
                 let indexPath = IndexPath(row: row, section: 0)
                 let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "siteCellIdentifier", for: indexPath) as! MonumentCollectionViewCell
@@ -33,6 +42,38 @@ class NearbyViewController: UIViewController {
                 return cell
             }
             .disposed(by: disposeBag)
+
+        viewModel
+            .dataManager
+            .monuments
+            .asObservable()
+            .subscribe(onNext: { monuments in
+                self.mapView.addAnnotations(monuments.map { MonumentAnnotation(monument: $0) })
+        }).addDisposableTo(disposeBag)
     }
     
 }
+
+extension NearbyViewController: MKMapViewDelegate {
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        if let annotation = annotation as? MonumentAnnotation {
+            let identifier = "monumentPin"
+            var annotationView: MKAnnotationView
+            if let dequeuedView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier) as? MKPinAnnotationView {
+                dequeuedView.annotation = annotation
+                annotationView = dequeuedView
+            } else {
+                annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: identifier)
+            }
+
+            annotationView.image = UIImage(named: "monumentAnnotation")
+            annotationView.canShowCallout = true
+            
+            return annotationView
+        }
+
+        return nil
+    }
+}
+
+

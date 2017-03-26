@@ -18,16 +18,19 @@ protocol TabBarWireframeType {
 
 class TabBarWireframe: TabBarWireframeType {
     let provider : Networking
+    let dataManager : DataManager
 
     required init(provider: Networking) {
         self.provider = provider
+        self.dataManager = DataManager()
     }
 
     func instantiateTabBarController() -> UITabBarController {
         let tabBarController = UITabBarController()
 
         tabBarController.viewControllers  = [
-            NearbyWireframe(provider: self.provider).instantiateInitialViewController(),
+            NearbyWireframe(provider: self.provider)
+                .instantiateInitialViewController(dataManager: self.dataManager),
             MapWireframe().instantiateInitialViewController(),
             SearchWireframe().instantiateInitialViewController()
         ]
