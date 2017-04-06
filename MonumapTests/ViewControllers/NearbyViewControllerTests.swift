@@ -24,7 +24,7 @@ class NearbyViewControllerTests: QuickSpec {
     override func spec() {
         var nearbyVC: NearbyViewController!
 
-        describe("NearbyViewController") { 
+        describe("NearbyViewController") {
             beforeEach {
                 nearbyVC = UIStoryboard.main().viewControllerWithID(.nearbyViewControllerID) as! NearbyViewController
                 nearbyVC.viewModelConstructor = { _ in
@@ -34,10 +34,40 @@ class NearbyViewControllerTests: QuickSpec {
             }
 
             context("when initialised") {
+                it("has all the variables initialised correctly") {
+                    expect(nearbyVC.collectionView).notTo(beNil())
+                    expect(nearbyVC.mapView).notTo(beNil())
+                    expect(nearbyVC.viewModel).notTo(beNil())
+                    expect(nearbyVC.viewModelConstructor).notTo(beNil())
+                    expect(nearbyVC.mapViewClusterModel).notTo(beNil())
+                    expect(nearbyVC.visibleMonuments.value.count) == 0
+                    expect(nearbyVC.mapView.delegate).notTo(beNil())
+                }
+
                 it("looks good by default") {
+                    nearbyVC.visibleMonuments.value = [
+                        FakeObjects.FakeMonument.Monument1(),
+                        FakeObjects.FakeMonument.Monument2(),
+                        FakeObjects.FakeMonument.Monument3(),
+                        FakeObjects.FakeMonument.Monument4(),
+                        FakeObjects.FakeMonument.Monument5()
+                    ]
+
                     expect(nearbyVC.view) == snapshot(sizes: sizes)
 //                    expect(nearbyVC.view) == recordSnapshot(sizes: sizes)
                 }
+
+                it("gets the monuments") {
+                    expect(nearbyVC.viewModel.dataManager.monuments.value.count) == 1052
+                }
+
+                it("adds the annotations") {
+                    expect(nearbyVC.mapViewClusterModel.annotations.count) == 1052
+                }
+            }
+
+            describe("getVisibleMonuments") {
+                // TODO: Add tests
             }
 
         }

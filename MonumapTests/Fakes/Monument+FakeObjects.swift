@@ -32,5 +32,38 @@ extension FakeObjects {
                 location: "Wiltshire, England"
             )
         }
+
+        static func Monument3() -> Monument {
+            return Monument(
+                id: "1a2b60d0-4a40-4464-b40b-185d5e62a8db",
+                site: "Tower of London",
+                dateInscribed: "1988",
+                latitude: 51.50805664062,
+                longitude: -0.07611110806465149,
+                location: "London Borough of Tower Hamlets, England"
+            )
+        }
+
+        static func Monument4() -> Monument {
+            return Monument(
+                id: "ecf957a4-0a42-4737-bf80-20265ae88c24",
+                site: "Gough and Inaccessible Islands",
+                dateInscribed: "1995",
+                latitude: -40.32472229003906,
+                longitude: -9.928610801696778,
+                location: "Tristan da Cunha Island group, St Helena Dependency"
+            )
+        }
+
+        static func Monument5() -> Monument {
+            return Monument(
+                id: "0cb20f06-6787-4a23-9f5c-96f85d8ad447",
+                site: "Historic Town of St George and Related Fortifications, Bermuda",
+                dateInscribed: "2000",
+                latitude: 32.37944412231445,
+                longitude: -64.67778015136719,
+                location: "St George, Bermuda"
+            )
+        }
     }
 }

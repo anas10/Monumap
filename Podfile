@@ -10,6 +10,7 @@ target 'Monumap' do
     pod 'RxCocoa'
     pod 'Moya/RxSwift'
     pod 'SwiftyJSON'
+    pod 'CCHMapClusterController'
 
     target 'MonumapTests' do
         inherit! :search_paths

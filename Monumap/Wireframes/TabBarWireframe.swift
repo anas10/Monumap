@@ -31,7 +31,8 @@ class TabBarWireframe: TabBarWireframeType {
         tabBarController.viewControllers  = [
             NearbyWireframe(provider: self.provider)
                 .instantiateInitialViewController(dataManager: self.dataManager),
-            MapWireframe().instantiateInitialViewController(),
+            MapWireframe(provider: self.provider)
+                .instantiateInitialViewController(dataManager: self.dataManager),
             SearchWireframe().instantiateInitialViewController()
         ]
 

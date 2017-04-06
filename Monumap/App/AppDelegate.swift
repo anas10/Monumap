@@ -13,7 +13,7 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     #if DEBUG
-    let provider = Networking.newStubbingNetworking(delay: 1.0)
+    let provider = Networking.newStubbingNetworking()
     #else
     let provider = Networking.newDefaultNetworking()
     #endif

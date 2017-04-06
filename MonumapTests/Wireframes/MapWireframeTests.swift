@@ -19,7 +19,7 @@ class MapWireframeTests: QuickSpec {
         describe("MapWireframe") {
 
             beforeEach {
-                mapWireframe = MapWireframe()
+                mapWireframe = MapWireframe(provider: Networking.newStubbingNetworking())
             }
 
             context("when initialised") {
@@ -30,11 +30,12 @@ class MapWireframeTests: QuickSpec {
 
             context("when instantiating") {
                 it("it returns the right initial view controller") {
-                    let subject = mapWireframe.instantiateInitialViewController()
+                    let subject = mapWireframe.instantiateInitialViewController(dataManager: DataManager())
 
                     expect(subject).to(beAKindOf(MapViewController.self))
                     expect(subject.tabBarItem.title) == "MAP"
                     expect(subject.tabBarItem.image).notTo(beNil())
+                    expect(subject.viewModelConstructor).notTo(beNil())
                 }
             }
             

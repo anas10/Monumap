@@ -1,5 +1,6 @@
 PODS:
   - Alamofire (4.3.0)
+  - CCHMapClusterController (1.7.0)
   - FBSnapshotTestCase (2.1.4):
     - FBSnapshotTestCase/SwiftSupport (= 2.1.4)
   - FBSnapshotTestCase/Core (2.1.4)
@@ -26,6 +27,7 @@ PODS:
   - SwiftyJSON (3.1.4)
 
 DEPENDENCIES:
+  - CCHMapClusterController
   - Moya/RxSwift
   - Nimble
   - Nimble-Snapshots/DynamicSize
@@ -36,6 +38,7 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   Alamofire: 856a113053a7bc9cbe5d6367a555d773fc5cfef7
+  CCHMapClusterController: d8cd12cd5682ec6cd76d911ac7198f981b6cc1b8
   FBSnapshotTestCase: '094f9f314decbabe373b87cc339bea235a63e07a'
   Moya: 47f61da5b634aa71f676431b64ee0f81e976296d
   Nimble: 1527fd1bd2b4cf0636251a36bc8ab37e81da8347
@@ -46,6 +49,6 @@ SPEC CHECKSUMS:
   RxSwift: 46574f70d416b7923c237195939cc488a7fbf3a0
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
 
-PODFILE CHECKSUM: 8c93669d029e9494d378458190df23aa23f38ee2
+PODFILE CHECKSUM: dd0e89bb6b2fb2266d6a068264a576287fca27dd
 
 COCOAPODS: 1.2.0

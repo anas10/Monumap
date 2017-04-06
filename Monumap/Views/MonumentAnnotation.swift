@@ -10,6 +10,7 @@ import UIKit
 import MapKit
 
 class MonumentAnnotation: NSObject, MKAnnotation {
+    let monument: Monument
     let coordinate: CLLocationCoordinate2D
     let title: String?
 
@@ -20,6 +21,9 @@ class MonumentAnnotation: NSObject, MKAnnotation {
         )
 
         self.title = monument.site
+
+        self.monument = monument
+        
         super.init()
     }
 }

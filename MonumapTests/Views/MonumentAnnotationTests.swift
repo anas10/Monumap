@@ -23,6 +23,7 @@ class MonumentAnnotationTests: QuickSpec {
                 expect(subject.coordinate.latitude) == monument.latitude
                 expect(subject.coordinate.longitude) == monument.longitude
                 expect(subject.title) == monument.site
+                expect(subject.monument) == monument
             }
         }
 

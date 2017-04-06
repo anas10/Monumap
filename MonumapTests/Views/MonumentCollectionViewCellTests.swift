@@ -25,6 +25,7 @@ class MonumentCollectionViewCellTests: QuickSpec {
                 vc.viewModelConstructor = { _ in
                     NearbyViewModelTests.testSubject()
                 }
+                vc.visibleMonuments.value = [FakeObjects.FakeMonument.Monument1()]
                 _ = vc.view
 
                 let indexPath = IndexPath(row: 0, section: 0)

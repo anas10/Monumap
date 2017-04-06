@@ -12,8 +12,11 @@
 		A804F5521E75761B00990655 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A804F5501E75761B00990655 /* Main.storyboard */; };
 		A804F5541E75761C00990655 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A804F5531E75761C00990655 /* Assets.xcassets */; };
 		A804F5571E75761C00990655 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A804F5551E75761C00990655 /* LaunchScreen.storyboard */; };
+		A81C55D31E983D4C0085E03C /* MonumentClusterAnnotationViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81C55D21E983D4C0085E03C /* MonumentClusterAnnotationViewTests.swift */; };
 		A823FCE31E8865000037F2DB /* MonumentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A823FCE21E8865000037F2DB /* MonumentTests.swift */; };
 		A823FCE51E8867330037F2DB /* MonumentAnnotationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A823FCE41E8867330037F2DB /* MonumentAnnotationTests.swift */; };
+		A8486F531E8AADEC00241419 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8486F521E8AADEC00241419 /* MapViewModel.swift */; };
+		A8486F551E8AAE3600241419 /* MapViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8486F541E8AAE3600241419 /* MapViewModelTests.swift */; };
 		A855B08A1E758CCA0084D17C /* NearbyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A855B0891E758CCA0084D17C /* NearbyViewController.swift */; };
 		A855B08C1E758D990084D17C /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A855B08B1E758D990084D17C /* MapViewController.swift */; };
 		A855B08E1E758DE00084D17C /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A855B08D1E758DE00084D17C /* SearchViewController.swift */; };
@@ -34,7 +37,7 @@
 		A85CDDBB1E7E1E3700F60A45 /* MonumapAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85CDDBA1E7E1E3700F60A45 /* MonumapAPI.swift */; };
 		A85CDDBD1E7E1F8E00F60A45 /* APIUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85CDDBC1E7E1F8E00F60A45 /* APIUtils.swift */; };
 		A85CDDBF1E7E1FDD00F60A45 /* MonumapConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85CDDBE1E7E1FDD00F60A45 /* MonumapConfiguration.swift */; };
-		A85CDDC21E7E26A200F60A45 /* Monuments.json in Resources */ = {isa = PBXBuildFile; fileRef = A85CDDC11E7E26A200F60A45 /* Monuments.json */; };
+		A85CDDC21E7E26A200F60A45 /* MonumentsKingdom.json in Resources */ = {isa = PBXBuildFile; fileRef = A85CDDC11E7E26A200F60A45 /* MonumentsKingdom.json */; };
 		A85CDDC41E7ECF3400F60A45 /* NearbyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85CDDC31E7ECF3400F60A45 /* NearbyViewModel.swift */; };
 		A85CDDC71E7EDF5F00F60A45 /* Monument.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85CDDC61E7EDF5F00F60A45 /* Monument.swift */; };
 		A85CDDCA1E7EE08400F60A45 /* JSONSerializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85CDDC91E7EE08400F60A45 /* JSONSerializable.swift */; };
@@ -52,14 +55,20 @@
 		A85CDDEC1E7F2C7700F60A45 /* MonumentCollectionViewCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85CDDEB1E7F2C7700F60A45 /* MonumentCollectionViewCellTests.swift */; };
 		A85CDDEF1E7F7AF600F60A45 /* FakeObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85CDDEE1E7F7AF600F60A45 /* FakeObjects.swift */; };
 		A85CDDF11E7F7B2B00F60A45 /* Monument+FakeObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85CDDF01E7F7B2B00F60A45 /* Monument+FakeObjects.swift */; };
+		A86149F11EA190570016BFD2 /* MapViewClusterModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86149F01EA190570016BFD2 /* MapViewClusterModelTests.swift */; };
 		A8762E2D1E7B2131007F99E3 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8762E2C1E7B2131007F99E3 /* MapKit.framework */; };
+		A888B1961E910D16003150A0 /* MapViewClusterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A888B1951E910D16003150A0 /* MapViewClusterModel.swift */; };
+		A888B1981E911361003150A0 /* MonumentClusterAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A888B1971E911361003150A0 /* MonumentClusterAnnotationView.swift */; };
+		A888B19B1E915DE7003150A0 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A888B19A1E915DE7003150A0 /* Helpers.swift */; };
 		A88BB99E1E881AD900B443D2 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88BB99D1E881AD900B443D2 /* DataManager.swift */; };
 		A88BB9A01E881B1E00B443D2 /* DataManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88BB99F1E881B1E00B443D2 /* DataManagerTests.swift */; };
 		A88BB9A31E88353D00B443D2 /* MonumentAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88BB9A21E88353D00B443D2 /* MonumentAnnotation.swift */; };
+		A8DBEB201E992C1E00798B63 /* HelpersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DBEB1F1E992C1E00798B63 /* HelpersTests.swift */; };
 		A8DFDC691E7B34D800B14F47 /* Lora-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A8DFDC681E7B34D800B14F47 /* Lora-Bold.ttf */; };
 		A8DFDC6B1E7B364100B14F47 /* Montserrat-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A8DFDC6A1E7B364100B14F47 /* Montserrat-SemiBold.ttf */; };
 		A8DFDC6D1E7B405800B14F47 /* Montserrat-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A8DFDC6C1E7B405800B14F47 /* Montserrat-Medium.ttf */; };
 		A8DFDC6F1E7B457300B14F47 /* placeholder-image.png in Resources */ = {isa = PBXBuildFile; fileRef = A8DFDC6E1E7B457300B14F47 /* placeholder-image.png */; };
+		A8F1845C1E8FF00600B2F2DA /* Monuments.json in Resources */ = {isa = PBXBuildFile; fileRef = A8F1845B1E8FF00600B2F2DA /* Monuments.json */; };
 		EFF065C69F70D4CA5A9E53C9 /* Pods_Monumap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41018ED8D8A3D881C33237BD /* Pods_Monumap.framework */; };
 /* End PBXBuildFile section */
 
@@ -86,8 +95,11 @@
 		A804F5581E75761C00990655 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A804F55D1E75761C00990655 /* MonumapTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MonumapTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A804F5631E75761C00990655 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A823FCE21E8865000037F2DB /* MonumentTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MonumentTests.swift; path = MonumapTests/Network/MonumentTests.swift; sourceTree = SOURCE_ROOT; };
-		A823FCE41E8867330037F2DB /* MonumentAnnotationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MonumentAnnotationTests.swift; path = Views/MonumentAnnotationTests.swift; sourceTree = "<group>"; };
+		A81C55D21E983D4C0085E03C /* MonumentClusterAnnotationViewTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonumentClusterAnnotationViewTests.swift; sourceTree = "<group>"; };
+		A823FCE21E8865000037F2DB /* MonumentTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonumentTests.swift; sourceTree = "<group>"; };
+		A823FCE41E8867330037F2DB /* MonumentAnnotationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonumentAnnotationTests.swift; sourceTree = "<group>"; };
+		A8486F521E8AADEC00241419 /* MapViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
+		A8486F541E8AAE3600241419 /* MapViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewModelTests.swift; sourceTree = "<group>"; };
 		A855B0891E758CCA0084D17C /* NearbyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NearbyViewController.swift; sourceTree = "<group>"; };
 		A855B08B1E758D990084D17C /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		A855B08D1E758DE00084D17C /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
@@ -108,7 +120,7 @@
 		A85CDDBA1E7E1E3700F60A45 /* MonumapAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonumapAPI.swift; sourceTree = "<group>"; };
 		A85CDDBC1E7E1F8E00F60A45 /* APIUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIUtils.swift; sourceTree = "<group>"; };
 		A85CDDBE1E7E1FDD00F60A45 /* MonumapConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonumapConfiguration.swift; sourceTree = "<group>"; };
-		A85CDDC11E7E26A200F60A45 /* Monuments.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Monuments.json; sourceTree = "<group>"; };
+		A85CDDC11E7E26A200F60A45 /* MonumentsKingdom.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MonumentsKingdom.json; sourceTree = "<group>"; };
 		A85CDDC31E7ECF3400F60A45 /* NearbyViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NearbyViewModel.swift; sourceTree = "<group>"; };
 		A85CDDC61E7EDF5F00F60A45 /* Monument.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Monument.swift; sourceTree = "<group>"; };
 		A85CDDC91E7EE08400F60A45 /* JSONSerializable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONSerializable.swift; sourceTree = "<group>"; };
@@ -123,17 +135,23 @@
 		A85CDDE41E7F23D700F60A45 /* MonumentCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonumentCollectionViewCell.swift; sourceTree = "<group>"; };
 		A85CDDE61E7F291C00F60A45 /* MapViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewControllerTests.swift; sourceTree = "<group>"; };
 		A85CDDE81E7F293600F60A45 /* SearchViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewControllerTests.swift; sourceTree = "<group>"; };
-		A85CDDEB1E7F2C7700F60A45 /* MonumentCollectionViewCellTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MonumentCollectionViewCellTests.swift; path = Views/MonumentCollectionViewCellTests.swift; sourceTree = "<group>"; };
-		A85CDDEE1E7F7AF600F60A45 /* FakeObjects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FakeObjects.swift; path = Fakes/FakeObjects.swift; sourceTree = "<group>"; };
-		A85CDDF01E7F7B2B00F60A45 /* Monument+FakeObjects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Monument+FakeObjects.swift"; path = "Fakes/Monument+FakeObjects.swift"; sourceTree = "<group>"; };
+		A85CDDEB1E7F2C7700F60A45 /* MonumentCollectionViewCellTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonumentCollectionViewCellTests.swift; sourceTree = "<group>"; };
+		A85CDDEE1E7F7AF600F60A45 /* FakeObjects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeObjects.swift; sourceTree = "<group>"; };
+		A85CDDF01E7F7B2B00F60A45 /* Monument+FakeObjects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Monument+FakeObjects.swift"; sourceTree = "<group>"; };
+		A86149F01EA190570016BFD2 /* MapViewClusterModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewClusterModelTests.swift; sourceTree = "<group>"; };
 		A8762E2C1E7B2131007F99E3 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		A888B1951E910D16003150A0 /* MapViewClusterModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewClusterModel.swift; sourceTree = "<group>"; };
+		A888B1971E911361003150A0 /* MonumentClusterAnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonumentClusterAnnotationView.swift; sourceTree = "<group>"; };
+		A888B19A1E915DE7003150A0 /* Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		A88BB99D1E881AD900B443D2 /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		A88BB99F1E881B1E00B443D2 /* DataManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManagerTests.swift; sourceTree = "<group>"; };
 		A88BB9A21E88353D00B443D2 /* MonumentAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonumentAnnotation.swift; sourceTree = "<group>"; };
+		A8DBEB1F1E992C1E00798B63 /* HelpersTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpersTests.swift; sourceTree = "<group>"; };
 		A8DFDC681E7B34D800B14F47 /* Lora-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lora-Bold.ttf"; sourceTree = "<group>"; };
 		A8DFDC6A1E7B364100B14F47 /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.ttf"; sourceTree = "<group>"; };
 		A8DFDC6C1E7B405800B14F47 /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.ttf"; sourceTree = "<group>"; };
 		A8DFDC6E1E7B457300B14F47 /* placeholder-image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "placeholder-image.png"; sourceTree = "<group>"; };
+		A8F1845B1E8FF00600B2F2DA /* Monuments.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Monuments.json; sourceTree = "<group>"; };
 		D15A1B6B61D78F452AA2CA17 /* Pods-MonumapTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MonumapTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MonumapTests/Pods-MonumapTests.release.xcconfig"; sourceTree = "<group>"; };
 		FD2807D6908F8C57EFE10B58 /* Pods-Monumap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Monumap.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Monumap/Pods-Monumap.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -208,14 +226,14 @@
 		A804F5601E75761C00990655 /* MonumapTests */ = {
 			isa = PBXGroup;
 			children = (
-				A85CDDED1E7F7AE100F60A45 /* Fakes */,
-				A85CDDEA1E7F2C4100F60A45 /* Views */,
 				A855B09B1E75B3140084D17C /* App */,
+				A85CDDED1E7F7AE100F60A45 /* Fakes */,
 				A85CDDCD1E7EE7C900F60A45 /* Network */,
 				A85CDDDD1E7F06FF00F60A45 /* Stubs */,
 				A855B0881E7583D80084D17C /* Supporting Files */,
 				A855B08F1E758E140084D17C /* ViewControllers */,
 				A85CDDDA1E7F04F500F60A45 /* ViewModels */,
+				A85CDDEA1E7F2C4100F60A45 /* Views */,
 				A855B0941E758FF30084D17C /* Wireframes */,
 			);
 			path = MonumapTests;
@@ -225,8 +243,9 @@
 			isa = PBXGroup;
 			children = (
 				A804F54A1E75761B00990655 /* AppDelegate.swift */,
-				A855B0971E75B1240084D17C /* main.swift */,
 				A88BB99D1E881AD900B443D2 /* DataManager.swift */,
+				A888B19A1E915DE7003150A0 /* Helpers.swift */,
+				A855B0971E75B1240084D17C /* main.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -255,8 +274,9 @@
 		A855B0841E7583860084D17C /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				A85CDDE41E7F23D700F60A45 /* MonumentCollectionViewCell.swift */,
 				A88BB9A21E88353D00B443D2 /* MonumentAnnotation.swift */,
+				A888B1971E911361003150A0 /* MonumentClusterAnnotationView.swift */,
+				A85CDDE41E7F23D700F60A45 /* MonumentCollectionViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -275,6 +295,8 @@
 		A855B0861E7583990084D17C /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				A888B1951E910D16003150A0 /* MapViewClusterModel.swift */,
+				A8486F521E8AADEC00241419 /* MapViewModel.swift */,
 				A85CDDC31E7ECF3400F60A45 /* NearbyViewModel.swift */,
 			);
 			path = ViewModels;
@@ -304,8 +326,8 @@
 		A855B08F1E758E140084D17C /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				A85CDDB51E7D92FA00F60A45 /* NearbyViewControllerTests.swift */,
 				A85CDDE61E7F291C00F60A45 /* MapViewControllerTests.swift */,
+				A85CDDB51E7D92FA00F60A45 /* NearbyViewControllerTests.swift */,
 				A85CDDE81E7F293600F60A45 /* SearchViewControllerTests.swift */,
 			);
 			path = ViewControllers;
@@ -327,6 +349,7 @@
 			children = (
 				A855B0991E75B30C0084D17C /* AppDelegateTests.swift */,
 				A88BB99F1E881B1E00B443D2 /* DataManagerTests.swift */,
+				A8DBEB1F1E992C1E00798B63 /* HelpersTests.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -349,7 +372,8 @@
 		A85CDDC01E7E268200F60A45 /* JSON */ = {
 			isa = PBXGroup;
 			children = (
-				A85CDDC11E7E26A200F60A45 /* Monuments.json */,
+				A8F1845B1E8FF00600B2F2DA /* Monuments.json */,
+				A85CDDC11E7E26A200F60A45 /* MonumentsKingdom.json */,
 			);
 			path = JSON;
 			sourceTree = "<group>";
@@ -402,7 +426,9 @@
 		A85CDDDA1E7F04F500F60A45 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				A8486F541E8AAE3600241419 /* MapViewModelTests.swift */,
 				A85CDDDB1E7F050B00F60A45 /* NearbyViewModelTests.swift */,
+				A86149F01EA190570016BFD2 /* MapViewClusterModelTests.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -418,10 +444,11 @@
 		A85CDDEA1E7F2C4100F60A45 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				A85CDDEB1E7F2C7700F60A45 /* MonumentCollectionViewCellTests.swift */,
 				A823FCE41E8867330037F2DB /* MonumentAnnotationTests.swift */,
+				A81C55D21E983D4C0085E03C /* MonumentClusterAnnotationViewTests.swift */,
+				A85CDDEB1E7F2C7700F60A45 /* MonumentCollectionViewCellTests.swift */,
 			);
-			name = Views;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		A85CDDED1E7F7AE100F60A45 /* Fakes */ = {
@@ -430,7 +457,7 @@
 				A85CDDEE1E7F7AF600F60A45 /* FakeObjects.swift */,
 				A85CDDF01E7F7B2B00F60A45 /* Monument+FakeObjects.swift */,
 			);
-			name = Fakes;
+			path = Fakes;
 			sourceTree = "<group>";
 		};
 		C74F13C076CEF5C8E3A0FB2C /* Frameworks */ = {
@@ -538,7 +565,8 @@
 				A8DFDC691E7B34D800B14F47 /* Lora-Bold.ttf in Resources */,
 				A804F5541E75761C00990655 /* Assets.xcassets in Resources */,
 				A8DFDC6F1E7B457300B14F47 /* placeholder-image.png in Resources */,
-				A85CDDC21E7E26A200F60A45 /* Monuments.json in Resources */,
+				A8F1845C1E8FF00600B2F2DA /* Monuments.json in Resources */,
+				A85CDDC21E7E26A200F60A45 /* MonumentsKingdom.json in Resources */,
 				A804F5521E75761B00990655 /* Main.storyboard in Resources */,
 				A8DFDC6D1E7B405800B14F47 /* Montserrat-Medium.ttf in Resources */,
 				A8DFDC6B1E7B364100B14F47 /* Montserrat-SemiBold.ttf in Resources */,
@@ -667,14 +695,18 @@
 				A804F54B1E75761B00990655 /* AppDelegate.swift in Sources */,
 				A855B0911E758F200084D17C /* TabBarWireframe.swift in Sources */,
 				A855B09F1E75B8F30084D17C /* UIStoryboardExtensions.swift in Sources */,
+				A888B1981E911361003150A0 /* MonumentClusterAnnotationView.swift in Sources */,
 				A85CDDBD1E7E1F8E00F60A45 /* APIUtils.swift in Sources */,
 				A85CDDC41E7ECF3400F60A45 /* NearbyViewModel.swift in Sources */,
 				A855B08C1E758D990084D17C /* MapViewController.swift in Sources */,
 				A85CDDE51E7F23D700F60A45 /* MonumentCollectionViewCell.swift in Sources */,
 				A88BB99E1E881AD900B443D2 /* DataManager.swift in Sources */,
 				A85CDDBF1E7E1FDD00F60A45 /* MonumapConfiguration.swift in Sources */,
+				A888B19B1E915DE7003150A0 /* Helpers.swift in Sources */,
+				A888B1961E910D16003150A0 /* MapViewClusterModel.swift in Sources */,
 				A88BB9A31E88353D00B443D2 /* MonumentAnnotation.swift in Sources */,
 				A85CDDC71E7EDF5F00F60A45 /* Monument.swift in Sources */,
+				A8486F531E8AADEC00241419 /* MapViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -682,6 +714,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A86149F11EA190570016BFD2 /* MapViewClusterModelTests.swift in Sources */,
 				A855B0931E758FEE0084D17C /* TabBarWireframeTests.swift in Sources */,
 				A85CDDE31E7F0FEC00F60A45 /* Observable+JSONSerializableTests.swift in Sources */,
 				A85CDDDC1E7F050B00F60A45 /* NearbyViewModelTests.swift in Sources */,
@@ -689,6 +722,7 @@
 				A85CDDF11E7F7B2B00F60A45 /* Monument+FakeObjects.swift in Sources */,
 				A85CDDB61E7D92FA00F60A45 /* NearbyViewControllerTests.swift in Sources */,
 				A85CDDD51E7EEEEF00F60A45 /* APIUtilsTests.swift in Sources */,
+				A8DBEB201E992C1E00798B63 /* HelpersTests.swift in Sources */,
 				A85CDDDF1E7F073C00F60A45 /* MonumentsStubProvider.swift in Sources */,
 				A88BB9A01E881B1E00B443D2 /* DataManagerTests.swift in Sources */,
 				A823FCE51E8867330037F2DB /* MonumentAnnotationTests.swift in Sources */,
@@ -698,10 +732,12 @@
 				A85CDDE71E7F291C00F60A45 /* MapViewControllerTests.swift in Sources */,
 				A855B0A91E75CAE70084D17C /* SearchWireframeTests.swift in Sources */,
 				A85CDDD01E7EE7E900F60A45 /* ParsingUtilsTests.swift in Sources */,
+				A8486F551E8AAE3600241419 /* MapViewModelTests.swift in Sources */,
 				A855B09A1E75B30C0084D17C /* AppDelegateTests.swift in Sources */,
 				A85CDDEF1E7F7AF600F60A45 /* FakeObjects.swift in Sources */,
 				A85CDDE91E7F293600F60A45 /* SearchViewControllerTests.swift in Sources */,
 				A855B0A31E75B9F60084D17C /* NearbyWireframeTests.swift in Sources */,
+				A81C55D31E983D4C0085E03C /* MonumentClusterAnnotationViewTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

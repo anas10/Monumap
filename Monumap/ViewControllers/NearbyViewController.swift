@@ -10,6 +10,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 import MapKit
+import CCHMapClusterController
 
 class NearbyViewController: UIViewController {
 
@@ -18,6 +19,9 @@ class NearbyViewController: UIViewController {
 
     var viewModel: NearbyViewModel!
     var viewModelConstructor: NearbyViewModelConstructorType!
+    var mapViewClusterModel: MapViewClusterModel!
+
+    let visibleMonuments : Variable<[Monument]> = Variable([])
 
     private var disposeBag = DisposeBag()
 
@@ -26,14 +30,14 @@ class NearbyViewController: UIViewController {
 
         viewModel = viewModelConstructor(self)
 
+        mapViewClusterModel = MapViewClusterModel(mapView: self.mapView)
+
         mapView.delegate = self
 
         // Fetch the monuments
         viewModel.getMonuments().subscribe().addDisposableTo(disposeBag)
 
-        viewModel
-            .dataManager
-            .monuments
+        self.visibleMonuments
             .asObservable()
             .bindTo(collectionView.rx.items) { (collectionView, row, element) in
                 let indexPath = IndexPath(row: row, section: 0)
@@ -48,32 +52,50 @@ class NearbyViewController: UIViewController {
             .monuments
             .asObservable()
             .subscribe(onNext: { monuments in
-                self.mapView.addAnnotations(monuments.map { MonumentAnnotation(monument: $0) })
+                self.mapViewClusterModel.addAnnotations(monuments.map { MonumentAnnotation(monument: $0) }, withCompletionHandler: nil)
         }).addDisposableTo(disposeBag)
     }
-    
+
+    func getVisibleMonuments(mapView: MKMapView) -> [Monument] {
+        return mapView
+            .annotations(in: mapView.visibleMapRect)
+            .flatMap { ($0 as? CCHMapClusterAnnotation)?.annotations as? Set<MonumentAnnotation> }
+            .flatMap { $0 }
+            .flatMap { $0.monument }
+    }
+
 }
 
 extension NearbyViewController: MKMapViewDelegate {
+
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-        if let annotation = annotation as? MonumentAnnotation {
-            let identifier = "monumentPin"
-            var annotationView: MKAnnotationView
-            if let dequeuedView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier) as? MKPinAnnotationView {
-                dequeuedView.annotation = annotation
-                annotationView = dequeuedView
-            } else {
-                annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: identifier)
-            }
-
-            annotationView.image = UIImage(named: "monumentAnnotation")
-            annotationView.canShowCallout = true
-            
-            return annotationView
-        }
-
-        return nil
+        return self.mapViewClusterModel.viewFor(annotation: annotation)
     }
-}
 
+    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+        self.mapViewClusterModel.selectCluster(view: view)
+        if let monument = getMonumentFrom(view: view),
+            let pos = self.visibleMonuments.value.index(of: monument) {
+            self.collectionView
+                .scrollToItem(at: IndexPath(item: pos, section: 0),
+                              at: .left,
+                              animated: true)
+        } else {
+            print("Couldn't find monument")
+        }
+    }
+
+    func mapViewDidFinishLoadingMap(_ mapView: MKMapView) {
+        self.visibleMonuments.value = getVisibleMonuments(mapView: mapView)
+    }
+
+    func mapViewDidFailLoadingMap(_ mapView: MKMapView, withError error: Error) {
+        self.visibleMonuments.value = getVisibleMonuments(mapView: mapView)
+    }
+
+    func mapView(_ mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
+        self.visibleMonuments.value = getVisibleMonuments(mapView: mapView)
+    }
+    
+}
 

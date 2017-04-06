@@ -16,7 +16,7 @@ class TabBarWireframeTests: QuickSpec {
     override func spec() {
         var tabBarWireframe: TabBarWireframeType!
 
-        describe("TabBarWireframe") { 
+        describe("TabBarWireframe") {
 
             beforeEach {
                 tabBarWireframe = TabBarWireframe(
