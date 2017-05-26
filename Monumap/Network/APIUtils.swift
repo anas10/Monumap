@@ -18,7 +18,7 @@ func url(_ route: TargetType) -> String {
 func composeBaseURL(_ path: String) -> URL {
     var components = URLComponents()
     components.host = MonumapConfiguration.providerHost
-    components.port = MonumapConfiguration.providerPort as Int?
+    components.port = MonumapConfiguration.providerPort
     components.path = path
     components.scheme = MonumapConfiguration.scheme
     return components.url!

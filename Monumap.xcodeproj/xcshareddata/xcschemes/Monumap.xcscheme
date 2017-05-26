@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0820"
+   LastUpgradeVersion = "0830"
    version = "1.7">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -56,7 +56,7 @@
             buildForAnalyzing = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "0921CC2F4398BE9A4F1CEACB30684B56"
+               BlueprintIdentifier = "DD7C8BF89FE8053D0A2A2D88BB49CF07"
                BuildableName = "Nimble.framework"
                BlueprintName = "Nimble"
                ReferencedContainer = "container:Pods/Pods.xcodeproj">
@@ -70,7 +70,7 @@
             buildForAnalyzing = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "64DEF749BEABA423125BFB9FB0D86059"
+               BlueprintIdentifier = "30F0B92C011B7B809CA1C55A13D0A09E"
                BuildableName = "Nimble_Snapshots.framework"
                BlueprintName = "Nimble-Snapshots"
                ReferencedContainer = "container:Pods/Pods.xcodeproj">
@@ -84,7 +84,7 @@
             buildForAnalyzing = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "3A2B6DA448A19165FEE15C45B3F18600"
+               BlueprintIdentifier = "5C4B52655A45F75CAA98CC90732BF3F4"
                BuildableName = "Quick.framework"
                BlueprintName = "Quick"
                ReferencedContainer = "container:Pods/Pods.xcodeproj">

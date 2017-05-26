@@ -16,6 +16,7 @@ struct Monument {
     let latitude: Double
     let longitude: Double
     let location: String?
+    let states: String?
 }
 
 extension Monument : JSONSerializable {
@@ -28,6 +29,7 @@ extension Monument : JSONSerializable {
         self.latitude = try source.parseLatitude("latitude")
         self.longitude = try source.parseLongitude("longitude")
         self.location = try? source.parseString("location")
+        self.states = try? source.parseString("states")
     }
 }
 
@@ -39,5 +41,6 @@ func ==(lhs: Monument, rhs: Monument) -> Bool {
         lhs.site == rhs.site &&
         lhs.latitude == rhs.latitude &&
         lhs.longitude == rhs.longitude &&
-        lhs.location == rhs.location
+        lhs.location == rhs.location &&
+        lhs.states == rhs.states
 }

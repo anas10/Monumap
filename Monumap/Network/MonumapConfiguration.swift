@@ -10,7 +10,7 @@ import Foundation
 
 open class MonumapConfiguration {
     open static let providerHost = "api-delivery.dev.piemapping.com"
-    open static let providerPort : NSNumber? = nil
+    open static let providerPort : Int? = nil
     open static let scheme = "https"
 
     open static let pathToAPIs = "/api"

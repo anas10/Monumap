@@ -39,7 +39,7 @@ class NearbyViewController: UIViewController {
 
         self.visibleMonuments
             .asObservable()
-            .bindTo(collectionView.rx.items) { (collectionView, row, element) in
+            .bind(to: collectionView.rx.items) { (collectionView, row, element) in
                 let indexPath = IndexPath(row: row, section: 0)
                 let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "siteCellIdentifier", for: indexPath) as! MonumentCollectionViewCell
                 cell.configure(monument: element)
