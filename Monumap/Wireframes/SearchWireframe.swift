@@ -8,23 +8,31 @@
 
 import UIKit
 
+typealias SearchViewModelConstructorType = (SearchViewController) -> (SearchViewModelType)
+
 protocol SearchWireframeType {
     var storyboard : UIStoryboard! { get }
 
-    init(storyboard: UIStoryboard)
+    init(storyboard: UIStoryboard, provider: Networking)
 
-    func instantiateInitialViewController() -> SearchViewController
+    func instantiateInitialViewController(dataManager: DataManager) -> SearchViewController
 }
 
 class SearchWireframe: SearchWireframeType {
 
     let storyboard: UIStoryboard!
+    let provider : Networking
 
-    required init(storyboard: UIStoryboard = UIStoryboard.main()) {
+    required init(storyboard: UIStoryboard = UIStoryboard.main(), provider: Networking) {
         self.storyboard = storyboard
+        self.provider = provider
     }
 
-    func instantiateInitialViewController() -> SearchViewController {
-        return self.storyboard.viewControllerWithID(.searchViewControllerID) as! SearchViewController
+    func instantiateInitialViewController(dataManager: DataManager) -> SearchViewController {
+        let vc = self.storyboard.viewControllerWithID(.searchViewControllerID) as! SearchViewController
+        vc.viewModelConstructor = { _ in
+            SearchViewModel(provider: self.provider , dataManager: dataManager)
+        }
+        return vc
     }
 }

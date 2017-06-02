@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -203,25 +203,106 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Search" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="suF-QB-1su">
-                                <rect key="frame" x="130" y="312.5" width="115" height="42"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <searchBar contentMode="redraw" searchBarStyle="prominent" placeholder="Search countries or sites" translatesAutoresizingMaskIntoConstraints="NO" id="jGM-lJ-8MB">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <color key="barTintColor" red="0.96862745098039216" green="0.96470588235294119" blue="0.94117647058823528" alpha="1" colorSpace="calibratedRGB"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <scopeButtonTitles>
+                                    <string>Title</string>
+                                    <string>Title</string>
+                                </scopeButtonTitles>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="84" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cie-dM-eV7">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <view key="tableHeaderView" contentMode="scaleToFill" id="prM-Yz-AK3">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="78"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Search results" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mdm-Qh-gpI">
+                                            <rect key="frame" x="16" y="29" width="115" height="20"/>
+                                            <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="16"/>
+                                            <color key="textColor" red="0.22352941179999999" green="0.29803921570000003" blue="0.35686274509999999" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <constraints>
+                                        <constraint firstItem="mdm-Qh-gpI" firstAttribute="centerY" secondItem="prM-Yz-AK3" secondAttribute="centerY" id="PL3-Q8-fAb"/>
+                                        <constraint firstItem="mdm-Qh-gpI" firstAttribute="leading" secondItem="prM-Yz-AK3" secondAttribute="leading" constant="16" id="VNx-mg-UQe"/>
+                                    </constraints>
+                                </view>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MonumentDefaultCell" rowHeight="84" id="2sg-6r-1B4" customClass="MonumentTableViewCell" customModule="Monumap" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="106" width="375" height="84"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2sg-6r-1B4" id="pnc-Lh-LHL">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="84"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder-image.png" translatesAutoresizingMaskIntoConstraints="NO" id="6GR-fP-4oz">
+                                                    <rect key="frame" x="16" y="0.0" width="72" height="72"/>
+                                                    <color key="backgroundColor" red="1" green="0.68358381509999999" blue="0.2406069632" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="72" id="9CO-mr-An4"/>
+                                                        <constraint firstAttribute="width" constant="72" id="Zed-x6-9zH"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Site name" lineBreakMode="tailTruncation" numberOfLines="2" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="j4L-ix-OBJ">
+                                                    <rect key="frame" x="103" y="0.0" width="256" height="23.5"/>
+                                                    <fontDescription key="fontDescription" name="Lora-Bold" family="Lora" pointSize="18"/>
+                                                    <color key="textColor" red="0.22352941176470587" green="0.29803921568627451" blue="0.35686274509803922" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Country" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="S1i-gH-TFI">
+                                                    <rect key="frame" x="103" y="28.5" width="256" height="43.5"/>
+                                                    <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="13"/>
+                                                    <color key="textColor" red="0.50196078431372548" green="0.51764705882352935" blue="0.5725490196078431" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="S1i-gH-TFI" secondAttribute="bottom" constant="12" id="2SJ-PV-vuM"/>
+                                                <constraint firstItem="j4L-ix-OBJ" firstAttribute="top" secondItem="pnc-Lh-LHL" secondAttribute="top" id="PEa-Bc-mg0"/>
+                                                <constraint firstItem="S1i-gH-TFI" firstAttribute="leading" secondItem="6GR-fP-4oz" secondAttribute="trailing" constant="15" id="TzN-Yq-mHO"/>
+                                                <constraint firstItem="S1i-gH-TFI" firstAttribute="top" secondItem="j4L-ix-OBJ" secondAttribute="bottom" constant="5" id="VS2-47-lZH"/>
+                                                <constraint firstItem="6GR-fP-4oz" firstAttribute="top" secondItem="pnc-Lh-LHL" secondAttribute="top" id="bOG-RJ-FZg"/>
+                                                <constraint firstItem="j4L-ix-OBJ" firstAttribute="leading" secondItem="6GR-fP-4oz" secondAttribute="trailing" constant="15" id="efY-mM-J7W"/>
+                                                <constraint firstAttribute="trailing" secondItem="j4L-ix-OBJ" secondAttribute="trailing" constant="16" id="icY-4H-PIp"/>
+                                                <constraint firstItem="6GR-fP-4oz" firstAttribute="leading" secondItem="pnc-Lh-LHL" secondAttribute="leading" constant="16" id="ixL-vP-Lyh"/>
+                                                <constraint firstAttribute="bottom" secondItem="6GR-fP-4oz" secondAttribute="bottom" constant="12" id="tve-gi-RVz"/>
+                                                <constraint firstAttribute="trailing" secondItem="S1i-gH-TFI" secondAttribute="trailing" constant="16" id="xfz-gg-rky"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="countryLabel" destination="S1i-gH-TFI" id="TfI-IU-StB"/>
+                                            <outlet property="monumentImageView" destination="6GR-fP-4oz" id="QOa-Im-YFa"/>
+                                            <outlet property="siteLabel" destination="j4L-ix-OBJ" id="PlP-y9-UBv"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="suF-QB-1su" firstAttribute="centerX" secondItem="W8D-fV-M8M" secondAttribute="centerX" id="dcO-AD-hqN"/>
-                            <constraint firstItem="suF-QB-1su" firstAttribute="centerY" secondItem="W8D-fV-M8M" secondAttribute="centerY" id="hEJ-Xc-uvo"/>
+                            <constraint firstAttribute="trailing" secondItem="jGM-lJ-8MB" secondAttribute="trailing" id="D2D-7d-D4y"/>
+                            <constraint firstItem="cie-dM-eV7" firstAttribute="top" secondItem="jGM-lJ-8MB" secondAttribute="bottom" id="KPh-Je-yUk"/>
+                            <constraint firstItem="K6r-nh-ev9" firstAttribute="top" secondItem="cie-dM-eV7" secondAttribute="bottom" id="Mjc-sq-Ob4"/>
+                            <constraint firstItem="jGM-lJ-8MB" firstAttribute="top" secondItem="dmx-jP-PD4" secondAttribute="bottom" id="OHL-32-GAe"/>
+                            <constraint firstItem="cie-dM-eV7" firstAttribute="leading" secondItem="W8D-fV-M8M" secondAttribute="leading" id="bKY-6X-3Go"/>
+                            <constraint firstItem="jGM-lJ-8MB" firstAttribute="leading" secondItem="W8D-fV-M8M" secondAttribute="leading" id="iPb-7n-wvc"/>
+                            <constraint firstAttribute="trailing" secondItem="cie-dM-eV7" secondAttribute="trailing" id="k4g-bK-HCd"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="SEARCH" image="icnMenuSearch" id="M1v-wT-dpP"/>
+                    <connections>
+                        <outlet property="searchBar" destination="jGM-lJ-8MB" id="2RC-Hq-0D2"/>
+                        <outlet property="tableViewResults" destination="cie-dM-eV7" id="G9F-sy-dSk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nib-uh-1vj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="750" y="1119"/>
+            <point key="canvasLocation" x="749.60000000000002" y="1118.5907046476761"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">

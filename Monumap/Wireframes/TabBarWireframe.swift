@@ -33,7 +33,8 @@ class TabBarWireframe: TabBarWireframeType {
                 .instantiateInitialViewController(dataManager: self.dataManager),
             MapWireframe(provider: self.provider)
                 .instantiateInitialViewController(dataManager: self.dataManager),
-            SearchWireframe().instantiateInitialViewController()
+            SearchWireframe(provider: self.provider)
+                .instantiateInitialViewController(dataManager: self.dataManager)
         ]
 
         return tabBarController

@@ -15,6 +15,7 @@
 		A81C55D31E983D4C0085E03C /* MonumentClusterAnnotationViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81C55D21E983D4C0085E03C /* MonumentClusterAnnotationViewTests.swift */; };
 		A823FCE31E8865000037F2DB /* MonumentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A823FCE21E8865000037F2DB /* MonumentTests.swift */; };
 		A823FCE51E8867330037F2DB /* MonumentAnnotationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A823FCE41E8867330037F2DB /* MonumentAnnotationTests.swift */; };
+		A84284FF1EC8F25900B3D91B /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84284FE1EC8F25900B3D91B /* SearchViewModel.swift */; };
 		A8486F531E8AADEC00241419 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8486F521E8AADEC00241419 /* MapViewModel.swift */; };
 		A8486F551E8AAE3600241419 /* MapViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8486F541E8AAE3600241419 /* MapViewModelTests.swift */; };
 		A855B08A1E758CCA0084D17C /* NearbyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A855B0891E758CCA0084D17C /* NearbyViewController.swift */; };
@@ -63,6 +64,7 @@
 		A88BB99E1E881AD900B443D2 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88BB99D1E881AD900B443D2 /* DataManager.swift */; };
 		A88BB9A01E881B1E00B443D2 /* DataManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88BB99F1E881B1E00B443D2 /* DataManagerTests.swift */; };
 		A88BB9A31E88353D00B443D2 /* MonumentAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88BB9A21E88353D00B443D2 /* MonumentAnnotation.swift */; };
+		A8B95F681ECA7A0D00693968 /* MonumentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B95F671ECA7A0D00693968 /* MonumentTableViewCell.swift */; };
 		A8DBEB201E992C1E00798B63 /* HelpersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DBEB1F1E992C1E00798B63 /* HelpersTests.swift */; };
 		A8DFDC691E7B34D800B14F47 /* Lora-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A8DFDC681E7B34D800B14F47 /* Lora-Bold.ttf */; };
 		A8DFDC6B1E7B364100B14F47 /* Montserrat-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A8DFDC6A1E7B364100B14F47 /* Montserrat-SemiBold.ttf */; };
@@ -98,6 +100,7 @@
 		A81C55D21E983D4C0085E03C /* MonumentClusterAnnotationViewTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonumentClusterAnnotationViewTests.swift; sourceTree = "<group>"; };
 		A823FCE21E8865000037F2DB /* MonumentTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonumentTests.swift; sourceTree = "<group>"; };
 		A823FCE41E8867330037F2DB /* MonumentAnnotationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonumentAnnotationTests.swift; sourceTree = "<group>"; };
+		A84284FE1EC8F25900B3D91B /* SearchViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		A8486F521E8AADEC00241419 /* MapViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
 		A8486F541E8AAE3600241419 /* MapViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewModelTests.swift; sourceTree = "<group>"; };
 		A855B0891E758CCA0084D17C /* NearbyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NearbyViewController.swift; sourceTree = "<group>"; };
@@ -146,6 +149,7 @@
 		A88BB99D1E881AD900B443D2 /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		A88BB99F1E881B1E00B443D2 /* DataManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManagerTests.swift; sourceTree = "<group>"; };
 		A88BB9A21E88353D00B443D2 /* MonumentAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonumentAnnotation.swift; sourceTree = "<group>"; };
+		A8B95F671ECA7A0D00693968 /* MonumentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonumentTableViewCell.swift; sourceTree = "<group>"; };
 		A8DBEB1F1E992C1E00798B63 /* HelpersTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpersTests.swift; sourceTree = "<group>"; };
 		A8DFDC681E7B34D800B14F47 /* Lora-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lora-Bold.ttf"; sourceTree = "<group>"; };
 		A8DFDC6A1E7B364100B14F47 /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.ttf"; sourceTree = "<group>"; };
@@ -277,6 +281,7 @@
 				A88BB9A21E88353D00B443D2 /* MonumentAnnotation.swift */,
 				A888B1971E911361003150A0 /* MonumentClusterAnnotationView.swift */,
 				A85CDDE41E7F23D700F60A45 /* MonumentCollectionViewCell.swift */,
+				A8B95F671ECA7A0D00693968 /* MonumentTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -298,6 +303,7 @@
 				A888B1951E910D16003150A0 /* MapViewClusterModel.swift */,
 				A8486F521E8AADEC00241419 /* MapViewModel.swift */,
 				A85CDDC31E7ECF3400F60A45 /* NearbyViewModel.swift */,
+				A84284FE1EC8F25900B3D91B /* SearchViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -701,7 +707,9 @@
 				A855B08C1E758D990084D17C /* MapViewController.swift in Sources */,
 				A85CDDE51E7F23D700F60A45 /* MonumentCollectionViewCell.swift in Sources */,
 				A88BB99E1E881AD900B443D2 /* DataManager.swift in Sources */,
+				A8B95F681ECA7A0D00693968 /* MonumentTableViewCell.swift in Sources */,
 				A85CDDBF1E7E1FDD00F60A45 /* MonumapConfiguration.swift in Sources */,
+				A84284FF1EC8F25900B3D91B /* SearchViewModel.swift in Sources */,
 				A888B19B1E915DE7003150A0 /* Helpers.swift in Sources */,
 				A888B1961E910D16003150A0 /* MapViewClusterModel.swift in Sources */,
 				A88BB9A31E88353D00B443D2 /* MonumentAnnotation.swift in Sources */,
