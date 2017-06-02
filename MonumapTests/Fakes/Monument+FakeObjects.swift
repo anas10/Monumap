@@ -18,7 +18,8 @@ extension FakeObjects {
                 dateInscribed: "1987",
                 latitude: 51.38138961791992,
                 longitude: -2.3586111068725588,
-                location: "Avon, England"
+                location: "Avon, England",
+                states: "United Kingdom of Great Britain and Northern Ireland"
             )
         }
 
@@ -29,7 +30,8 @@ extension FakeObjects {
                 dateInscribed: "1986",
                 latitude: 51.178890228271487,
                 longitude: -1.8252778053283692,
-                location: "Wiltshire, England"
+                location: "Wiltshire, England",
+                states: "United Kingdom of Great Britain and Northern Ireland"
             )
         }
 
@@ -40,7 +42,8 @@ extension FakeObjects {
                 dateInscribed: "1988",
                 latitude: 51.50805664062,
                 longitude: -0.07611110806465149,
-                location: "London Borough of Tower Hamlets, England"
+                location: "London Borough of Tower Hamlets, England",
+                states: "United Kingdom of Great Britain and Northern Ireland"
             )
         }
 
@@ -51,7 +54,8 @@ extension FakeObjects {
                 dateInscribed: "1995",
                 latitude: -40.32472229003906,
                 longitude: -9.928610801696778,
-                location: "Tristan da Cunha Island group, St Helena Dependency"
+                location: "Tristan da Cunha Island group, St Helena Dependency",
+                states: "United Kingdom of Great Britain and Northern Ireland"
             )
         }
 
@@ -62,7 +66,8 @@ extension FakeObjects {
                 dateInscribed: "2000",
                 latitude: 32.37944412231445,
                 longitude: -64.67778015136719,
-                location: "St George, Bermuda"
+                location: "St George, Bermuda",
+                states: "United Kingdom of Great Britain and Northern Ireland"
             )
         }
     }

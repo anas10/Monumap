@@ -19,7 +19,9 @@ class SearchWireframeTests: QuickSpec {
         describe("SearchWireframe") {
 
             beforeEach {
-                searchWireframe = SearchWireframe()
+                searchWireframe = SearchWireframe(
+                    provider: Networking.newStubbingNetworking()
+                )
             }
 
             context("when initialised") {
@@ -30,7 +32,7 @@ class SearchWireframeTests: QuickSpec {
 
             context("when instantiating") {
                 it("it returns the right initial view controller") {
-                    let subject = searchWireframe.instantiateInitialViewController()
+                    let subject = searchWireframe.instantiateInitialViewController(dataManager: DataManager())
 
                     expect(subject).to(beAKindOf(SearchViewController.self))
                     expect(subject.tabBarItem.title) == "SEARCH"
