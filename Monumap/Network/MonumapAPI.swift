@@ -14,6 +14,10 @@ public enum MonumapAPI {
 }
 
 extension MonumapAPI: TargetType {
+    public var headers: [String : String]? {
+        return [:]
+    }
+
     public var baseURL: URL {return MonumapConfiguration.providerURL as URL}
 
     public var path: String {
@@ -55,6 +59,6 @@ extension MonumapAPI: TargetType {
     }
     
     public var task: Task {
-        return .request
+        return .requestPlain
     }
 }

@@ -75,7 +75,7 @@ extension NearbyViewController: MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
         self.mapViewClusterModel.selectCluster(view: view)
         if let monument = getMonumentFrom(view: view),
-            let pos = self.visibleMonuments.value.index(of: monument) {
+            let pos = self.visibleMonuments.value.firstIndex(of: monument) {
             self.collectionView
                 .scrollToItem(at: IndexPath(item: pos, section: 0),
                               at: .left,

@@ -1,54 +1,48 @@
 PODS:
-  - Alamofire (4.4.0)
-  - CCHMapClusterController (1.7.0)
-  - FBSnapshotTestCase (2.1.4):
-    - FBSnapshotTestCase/SwiftSupport (= 2.1.4)
-  - FBSnapshotTestCase/Core (2.1.4)
-  - FBSnapshotTestCase/SwiftSupport (2.1.4):
-    - FBSnapshotTestCase/Core
-  - Moya/Core (8.0.4):
+  - Alamofire (4.9.1)
+  - CCHMapClusterController (1.7.2)
+  - Moya/Core (13.0.1):
     - Alamofire (~> 4.1)
-    - Result (~> 3.0)
-  - Moya/RxSwift (8.0.4):
+    - Result (~> 4.1)
+  - Moya/RxSwift (13.0.1):
     - Moya/Core
-    - RxSwift (~> 3.0)
-  - Nimble (7.0.0)
-  - Nimble-Snapshots/Core (5.0.0):
-    - FBSnapshotTestCase (~> 2.0)
-    - Nimble (~> 7.0)
-    - Quick (~> 1.0)
-  - Nimble-Snapshots/DynamicSize (5.0.0):
-    - Nimble-Snapshots/Core
-  - Quick (1.1.0)
-  - Result (3.2.1)
-  - RxCocoa (3.4.1):
-    - RxSwift (~> 3.4)
-  - RxSwift (3.4.1)
-  - SwiftyJSON (3.1.4)
+    - RxSwift (~> 4.0)
+  - Quick (2.2.0)
+  - Result (4.1.0)
+  - RxCocoa (4.5.0):
+    - RxSwift (>= 4.4.2, ~> 4.4)
+  - RxSwift (4.5.0)
+  - SwiftyJSON (5.0.0)
 
 DEPENDENCIES:
   - CCHMapClusterController
   - Moya/RxSwift
-  - Nimble
-  - Nimble-Snapshots/DynamicSize
   - Quick
   - RxCocoa
   - RxSwift
   - SwiftyJSON
 
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - Alamofire
+    - CCHMapClusterController
+    - Moya
+    - Quick
+    - Result
+    - RxCocoa
+    - RxSwift
+    - SwiftyJSON
+
 SPEC CHECKSUMS:
-  Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
-  CCHMapClusterController: d8cd12cd5682ec6cd76d911ac7198f981b6cc1b8
-  FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
-  Moya: a08bc060c7a44eee27447b239ed33a189b641e2b
-  Nimble: 874982b605d4d752fcac6be695d13c502de84b1b
-  Nimble-Snapshots: a12df9ba0eda3cd7a292e00a6b6e0059bd30229c
-  Quick: dafc587e21eed9f4cab3249b9f9015b0b7a7f71d
-  Result: 2453a22e5c5b11c0c3a478736e82cd02f763b781
-  RxCocoa: a8a5f1d061d0043e28f56976829f31ce63e8eb09
-  RxSwift: 656f8fbeca5bc372121a72d9ebdd3cd3bc0ffade
-  SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
+  Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
+  CCHMapClusterController: 682e1eb1373a7decda1b75fd7b24b3047fed9daa
+  Moya: f4a4b80ff2f8a4ffc208dfb31cd91636622fee6e
+  Quick: 7fb19e13be07b5dfb3b90d4f9824c855a11af40e
+  Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
+  RxCocoa: cbf70265dc65a981d4ac982e513c10cf23df24a0
+  RxSwift: f172070dfd1a93d70a9ab97a5a01166206e1c575
+  SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
 
-PODFILE CHECKSUM: dd0e89bb6b2fb2266d6a068264a576287fca27dd
+PODFILE CHECKSUM: 386e55ee9b2d4cb95bdf6e4335da6a2027e009f0
 
-COCOAPODS: 1.2.0
+COCOAPODS: 1.8.4

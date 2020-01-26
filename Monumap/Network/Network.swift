@@ -13,16 +13,26 @@ import Alamofire
 
 public typealias BasicAPI = MonumapAPI
 
-public class OnlineProvider<Target>: RxMoyaProvider<Target> where Target: TargetType {
+public class OnlineProvider<Target> where Target: Moya.TargetType {
 
-    public override init(endpointClosure: @escaping MoyaProvider<Target>.EndpointClosure = MoyaProvider.defaultEndpointMapping,
-                         requestClosure: @escaping MoyaProvider<Target>.RequestClosure = MoyaProvider.defaultRequestMapping,
-                         stubClosure: @escaping MoyaProvider<Target>.StubClosure = MoyaProvider.neverStub,
-                         manager: Manager = RxMoyaProvider<Target>.defaultAlamofireManager(),
-                         plugins: [PluginType] = [],
-                         trackInflights: Bool = false) {
+    fileprivate let provider: MoyaProvider<Target>
 
-        super.init(endpointClosure: endpointClosure, requestClosure: requestClosure, stubClosure: stubClosure, manager: manager, plugins: plugins, trackInflights: trackInflights)
+    public init(endpointClosure: @escaping MoyaProvider<Target>.EndpointClosure = MoyaProvider.defaultEndpointMapping,
+                requestClosure: @escaping MoyaProvider<Target>.RequestClosure = MoyaProvider<Target>.defaultRequestMapping,
+                stubClosure: @escaping MoyaProvider<Target>.StubClosure = MoyaProvider.neverStub,
+                manager: Manager = MoyaProvider<Target>.defaultAlamofireManager(),
+                plugins: [PluginType] = [],
+                trackInflights: Bool = false) {
+        self.provider = MoyaProvider(endpointClosure: endpointClosure,
+                                     requestClosure: requestClosure,
+                                     stubClosure: stubClosure,
+                                     manager: manager,
+                                     plugins: plugins,
+                                     trackInflights: trackInflights)
+    }
+
+    func request(_ token: Target) -> Observable<Moya.Response> {
+        return provider.rx.request(token).asObservable()
     }
 }
 
@@ -62,13 +72,13 @@ extension Networking {
 // Static methods
 public extension NetworkingType {
 
-    static func endpointsClosure<T>() -> (_ target: T) -> Endpoint<T> where T: TargetType {
+    static func endpointsClosure<T>() -> (_ target: T) -> Endpoint where T: TargetType {
         return { target in
-            return Endpoint<T>(url: url(target),
-                               sampleResponseClosure: {.networkResponse(200, target.sampleData)},
-                               method: target.method,
-                               parameters: target.parameters,
-                               parameterEncoding: target.parameterEncoding)
+            return Endpoint(url: url(target),
+                            sampleResponseClosure: {.networkResponse(200, target.sampleData)},
+                            method: target.method,
+                            task: target.task,
+                            httpHeaderFields: nil)
         }
     }
 
@@ -78,11 +88,15 @@ public extension NetworkingType {
         ]
     }
 
-    public static func endpointResolver<T>() -> MoyaProvider<T>.RequestClosure where T: TargetType {
+    static func endpointResolver() -> MoyaProvider<T>.RequestClosure {
         return { (endpoint, closure) in
-            var request = endpoint.urlRequest!
-            request.httpShouldHandleCookies = false
-            closure(.success(request))
+            do {
+                var request = try endpoint.urlRequest()
+                request.httpShouldHandleCookies = false
+                closure(.success(request))
+            } catch let error {
+                closure(.failure(MoyaError.underlying(error, nil)))
+            }
         }
     }
 }
