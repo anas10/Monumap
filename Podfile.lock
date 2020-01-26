@@ -1,12 +1,23 @@
 PODS:
   - Alamofire (4.9.1)
   - CCHMapClusterController (1.7.2)
+  - iOSSnapshotTestCase (5.0.2):
+    - iOSSnapshotTestCase/SwiftSupport (= 5.0.2)
+  - iOSSnapshotTestCase/Core (5.0.2)
+  - iOSSnapshotTestCase/SwiftSupport (5.0.2):
+    - iOSSnapshotTestCase/Core
   - Moya/Core (13.0.1):
     - Alamofire (~> 4.1)
     - Result (~> 4.1)
   - Moya/RxSwift (13.0.1):
     - Moya/Core
     - RxSwift (~> 4.0)
+  - Nimble (7.3.4)
+  - Nimble-Snapshots/Core (6.9.1):
+    - iOSSnapshotTestCase (~> 5.0)
+    - Nimble (~> 7.0)
+  - Nimble-Snapshots/DynamicSize (6.9.1):
+    - Nimble-Snapshots/Core
   - Quick (2.2.0)
   - Result (4.1.0)
   - RxCocoa (4.5.0):
@@ -17,6 +28,8 @@ PODS:
 DEPENDENCIES:
   - CCHMapClusterController
   - Moya/RxSwift
+  - Nimble
+  - Nimble-Snapshots/DynamicSize
   - Quick
   - RxCocoa
   - RxSwift
@@ -26,7 +39,10 @@ SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - Alamofire
     - CCHMapClusterController
+    - iOSSnapshotTestCase
     - Moya
+    - Nimble
+    - Nimble-Snapshots
     - Quick
     - Result
     - RxCocoa
@@ -36,13 +52,16 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
   CCHMapClusterController: 682e1eb1373a7decda1b75fd7b24b3047fed9daa
+  iOSSnapshotTestCase: 2d51aa06775e95cecb0a1fb9c5c159ccd1dd4596
   Moya: f4a4b80ff2f8a4ffc208dfb31cd91636622fee6e
+  Nimble: 051e3d8912d40138fa5591c78594f95fb172af37
+  Nimble-Snapshots: bbd1ab264bacc24a9ce24a8363bc05aac783aeb0
   Quick: 7fb19e13be07b5dfb3b90d4f9824c855a11af40e
   Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
   RxCocoa: cbf70265dc65a981d4ac982e513c10cf23df24a0
   RxSwift: f172070dfd1a93d70a9ab97a5a01166206e1c575
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
 
-PODFILE CHECKSUM: 386e55ee9b2d4cb95bdf6e4335da6a2027e009f0
+PODFILE CHECKSUM: dd0e89bb6b2fb2266d6a068264a576287fca27dd
 
 COCOAPODS: 1.8.4

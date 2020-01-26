@@ -78,7 +78,7 @@ public extension NetworkingType {
                             sampleResponseClosure: {.networkResponse(200, target.sampleData)},
                             method: target.method,
                             task: target.task,
-                            httpHeaderFields: nil)
+                            httpHeaderFields: target.headers)
         }
     }
 

@@ -30,7 +30,7 @@ class SearchViewController: UIViewController {
         self.shownData
             .asObservable()
             .bind(to: tableViewResults.rx.items)(cellFactory)
-            .addDisposableTo(disposeBag)
+            .disposed(by: disposeBag)
 
         self.searchBar
             .rx.text
@@ -56,7 +56,7 @@ class SearchViewController: UIViewController {
                             $0.states?.cleanForSearch().index(of: q) != nil
                 }
             })
-            .addDisposableTo(disposeBag)
+            .disposed(by: disposeBag)
 
     }
 

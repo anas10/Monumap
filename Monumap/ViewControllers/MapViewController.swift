@@ -36,7 +36,7 @@ class MapViewController: UIViewController {
             .asObservable()
             .subscribe(onNext: { monuments in
                 self.mapViewClusterModel.addAnnotations(monuments.map { MonumentAnnotation(monument: $0) }, withCompletionHandler: nil)
-            }).addDisposableTo(disposeBag)
+            }).disposed(by: disposeBag)
     }
     
 }

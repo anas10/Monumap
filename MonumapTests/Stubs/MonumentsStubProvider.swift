@@ -17,26 +17,17 @@ class MonumentsStubProvider {
 
     static func stubProvider(monumentsSucceed: Bool, monumentsCheck: Check) -> Networking {
 
-        let endpointsClosure = { (target: MonumapAPI) -> Endpoint<MonumapAPI> in
+        let endpointsClosure = { (target: MonumapAPI) -> Endpoint in
 
             switch target {
             case .monuments:
                 monumentsCheck?()
-                return Endpoint<MonumapAPI>(
-                    url: url(target),
-                    sampleResponseClosure: {
-                        .networkResponse(monumentsSucceed ? 200 : 403, target.sampleData)},
-                    method: target.method,
-                    parameters: target.parameters)
-            default:
-                // Fail on all other cases
-                fail("Unexpected network call, \(target)")
-                return Endpoint<MonumapAPI>(
-                    url: url(target),
-                    sampleResponseClosure: {.networkResponse(200, Data())},
-                    method: target.method,
-                    parameters: target.parameters
-                )
+                return Endpoint(url: url(target),
+                                sampleResponseClosure: {
+                                    .networkResponse(monumentsSucceed ? 200 : 403, target.sampleData)},
+                                method: target.method,
+                                task: target.task,
+                                httpHeaderFields: target.headers)
             }
         }
 

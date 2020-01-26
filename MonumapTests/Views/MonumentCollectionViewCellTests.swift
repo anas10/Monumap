@@ -21,26 +21,25 @@ class MonumentCollectionViewCellTests: QuickSpec {
         describe("MonumentCollectionViewCell") {
             beforeEach {
                 let vc = UIStoryboard.main()
-                    .viewControllerWithID(.nearbyViewControllerID) as! NearbyViewController
-                vc.viewModelConstructor = { _ in
+                    .viewControllerWithID(.nearbyViewControllerID) as? NearbyViewController
+                vc?.viewModelConstructor = { _ in
                     NearbyViewModelTests.testSubject()
                 }
-                vc.visibleMonuments.value = [FakeObjects.FakeMonument.Monument1()]
-                _ = vc.view
+                vc?.visibleMonuments.value = [FakeObjects.FakeMonument.Monument1()]
+                _ = vc?.view
 
                 let indexPath = IndexPath(row: 0, section: 0)
-                monumentCell = vc
+                monumentCell = vc?
                     .collectionView
                     .dequeueReusableCell(
                         withReuseIdentifier: "siteCellIdentifier",
-                        for: indexPath) as! MonumentCollectionViewCell
+                        for: indexPath) as? MonumentCollectionViewCell
             }
 
             context("when initialized") {
                 it("looks good by default") {
                     monumentCell.configure(monument: FakeObjects.FakeMonument.Monument1())
                     expect(monumentCell) == snapshot(sizes: self.size)
-//                    expect(monumentCell) == recordSnapshot(sizes: self.size)
                 }
 
                 it("has all the iboutlets links") {

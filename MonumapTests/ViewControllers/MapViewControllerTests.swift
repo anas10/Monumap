@@ -23,8 +23,8 @@ class MapViewControllerTests: QuickSpec {
             beforeEach {
                 let dataManager = DataManager()
                 let nearbyVM = NearbyViewModelTests.testSubject(dataManager: dataManager)
-                nearbyVM.getMonuments().subscribe().addDisposableTo(disposeBag)
-                mapVC = UIStoryboard.main().viewControllerWithID(.mapViewControllerID) as! MapViewController
+                nearbyVM.getMonuments().subscribe().disposed(by: disposeBag)
+                mapVC = UIStoryboard.main().viewControllerWithID(.mapViewControllerID) as? MapViewController
                 mapVC.viewModelConstructor = { _ in
                     MapViewModel(
                         provider: Networking.newStubbingNetworking(),
@@ -45,7 +45,6 @@ class MapViewControllerTests: QuickSpec {
 
                 it("looks good by default") {
                     expect(mapVC.view) == snapshot(sizes: sizes)
-//                    expect(mapVC.view) == recordSnapshot(sizes: sizes)
                 }
 
                 it("adds the annotations") {

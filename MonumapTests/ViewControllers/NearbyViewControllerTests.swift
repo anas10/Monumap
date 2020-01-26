@@ -26,7 +26,7 @@ class NearbyViewControllerTests: QuickSpec {
 
         describe("NearbyViewController") {
             beforeEach {
-                nearbyVC = UIStoryboard.main().viewControllerWithID(.nearbyViewControllerID) as! NearbyViewController
+                nearbyVC = UIStoryboard.main().viewControllerWithID(.nearbyViewControllerID) as? NearbyViewController
                 nearbyVC.viewModelConstructor = { _ in
                     NearbyViewModelTests.testSubject()
                 }
@@ -54,7 +54,6 @@ class NearbyViewControllerTests: QuickSpec {
                     ]
 
                     expect(nearbyVC.view) == snapshot(sizes: sizes)
-//                    expect(nearbyVC.view) == recordSnapshot(sizes: sizes)
                 }
 
                 it("gets the monuments") {

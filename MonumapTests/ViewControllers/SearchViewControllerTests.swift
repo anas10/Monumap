@@ -19,14 +19,13 @@ class SearchViewControllerTests: QuickSpec {
 
         describe("SearchViewController") {
             beforeEach {
-                searchVC = UIStoryboard.main().viewControllerWithID(.searchViewControllerID) as! SearchViewController
+                searchVC = UIStoryboard.main().viewControllerWithID(.searchViewControllerID) as? SearchViewController
                 _ = searchVC.view
             }
 
             context("when initialised") {
                 it("looks good by default") {
                     expect(searchVC.view) == snapshot(sizes: sizes)
-//                    expect(searchVC.view) == recordSnapshot(sizes: sizes)
                 }
             }
             

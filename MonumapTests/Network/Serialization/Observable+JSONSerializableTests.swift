@@ -33,7 +33,7 @@ class Observable_JSONSerializableTests: QuickSpec {
                         .mapToObject(TestStruct.self)
                         .subscribe(onNext: { obj in
                             testStruct = obj
-                        }).addDisposableTo(disposeBag)
+                        }).disposed(by: disposeBag)
 
                     expect(testStruct.id) == myId
                 }
@@ -49,7 +49,7 @@ class Observable_JSONSerializableTests: QuickSpec {
                         .mapToObject(TestStruct.self, key: "myKey")
                         .subscribe(onNext: { obj in
                             testStruct = obj
-                        }).addDisposableTo(disposeBag)
+                        }).disposed(by: disposeBag)
 
                     expect(testStruct.id) == myId
                 }
@@ -65,7 +65,7 @@ class Observable_JSONSerializableTests: QuickSpec {
                             if let e = e as? JSONSerializationError {
                                 error = e
                             } else { fail("wrong error type") }
-                        }).addDisposableTo(disposeBag)
+                        }).disposed(by: disposeBag)
 
                     expect(error) == JSONSerializationError.invalidJSON
                 }
@@ -83,7 +83,7 @@ class Observable_JSONSerializableTests: QuickSpec {
                             if let e = e as? JSONSerializationError {
                                 error = e
                             } else { fail("wrong error type") }
-                        }).addDisposableTo(disposeBag)
+                        }).disposed(by: disposeBag)
 
                     expect(error) == JSONSerializationError.invalidJSON
                 }
@@ -101,7 +101,7 @@ class Observable_JSONSerializableTests: QuickSpec {
                             if let e = e as? JSONSerializationError {
                                 error = e
                             } else { fail("wrong error type") }
-                        }).addDisposableTo(disposeBag)
+                        }).disposed(by: disposeBag)
 
                     expect(error) == JSONSerializationError.missing("myKey2")
                 }
@@ -121,7 +121,7 @@ class Observable_JSONSerializableTests: QuickSpec {
                             .mapToObjectArray(TestStruct.self)
                             .subscribe(onNext: { obj in
                                 subject = obj
-                            }).addDisposableTo(disposeBag)
+                            }).disposed(by: disposeBag)
 
                         expect(subject.count) == 3
                     }
@@ -137,7 +137,7 @@ class Observable_JSONSerializableTests: QuickSpec {
                                 if let e = e as? JSONSerializationError {
                                     error = e
                                 } else { fail("wrong error type") }
-                            }).addDisposableTo(disposeBag)
+                            }).disposed(by: disposeBag)
 
                         expect(error) == JSONSerializationError.invalidJSON
                     }
@@ -158,7 +158,7 @@ class Observable_JSONSerializableTests: QuickSpec {
                             .mapToObjectArray(TestStruct.self, key: "myKey")
                             .subscribe(onNext: { obj in
                                 subject = obj
-                            }).addDisposableTo(disposeBag)
+                            }).disposed(by: disposeBag)
 
                         expect(subject.count) == 3
                     }
@@ -174,7 +174,7 @@ class Observable_JSONSerializableTests: QuickSpec {
                                 if let e = e as? JSONSerializationError {
                                     error = e
                                 } else { fail("wrong error type") }
-                            }).addDisposableTo(disposeBag)
+                            }).disposed(by: disposeBag)
 
                         expect(error) == JSONSerializationError.invalidJSON
                     }
@@ -192,7 +192,7 @@ class Observable_JSONSerializableTests: QuickSpec {
                                 if let e = e as? JSONSerializationError {
                                     error = e
                                 } else { fail("wrong error type") }
-                            }).addDisposableTo(disposeBag)
+                            }).disposed(by: disposeBag)
 
                         expect(error) == JSONSerializationError.invalidJSON
                     }
@@ -210,7 +210,7 @@ class Observable_JSONSerializableTests: QuickSpec {
                                 if let e = e as? JSONSerializationError {
                                     error = e
                                 } else { fail("wrong error type") }
-                            }).addDisposableTo(disposeBag)
+                            }).disposed(by: disposeBag)
                         
                         expect(error) == JSONSerializationError.missing("myKey2")
                     }

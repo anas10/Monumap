@@ -35,7 +35,7 @@ class NearbyViewController: UIViewController {
         mapView.delegate = self
 
         // Fetch the monuments
-        viewModel.getMonuments().subscribe().addDisposableTo(disposeBag)
+        viewModel.getMonuments().subscribe().disposed(by: disposeBag)
 
         self.visibleMonuments
             .asObservable()
@@ -53,7 +53,7 @@ class NearbyViewController: UIViewController {
             .asObservable()
             .subscribe(onNext: { monuments in
                 self.mapViewClusterModel.addAnnotations(monuments.map { MonumentAnnotation(monument: $0) }, withCompletionHandler: nil)
-        }).addDisposableTo(disposeBag)
+        }).disposed(by: disposeBag)
     }
 
     func getVisibleMonuments(mapView: MKMapView) -> [Monument] {

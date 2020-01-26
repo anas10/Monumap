@@ -38,7 +38,7 @@ class NearbyViewModelTests: QuickSpec {
                         .getMonuments()
                         .subscribe(onNext: { obj in
                             monuments = obj
-                        }).addDisposableTo(disposeBag)
+                        }).disposed(by: disposeBag)
 
                     expect(checked).to(beTrue())
                     expect(monuments.count) >= 0
@@ -51,7 +51,7 @@ class NearbyViewModelTests: QuickSpec {
                     subject
                         .getMonuments()
                         .subscribe()
-                        .addDisposableTo(disposeBag)
+                        .disposed(by: disposeBag)
 
                     let count = dataManager.monuments.value.count
                     expect(count) >= 0
@@ -59,7 +59,7 @@ class NearbyViewModelTests: QuickSpec {
                     subject
                         .getMonuments()
                         .subscribe()
-                        .addDisposableTo(disposeBag)
+                        .disposed(by: disposeBag)
 
                     expect(dataManager.monuments.value.count) == count
                 }
@@ -77,7 +77,7 @@ class NearbyViewModelTests: QuickSpec {
                         .getMonuments()
                         .subscribe(onError: { _ in
                             errored = true
-                        }).addDisposableTo(disposeBag)
+                        }).disposed(by: disposeBag)
 
                     expect(checked).to(beTrue())
                     expect(errored).to(beTrue())
