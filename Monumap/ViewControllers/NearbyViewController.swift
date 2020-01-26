@@ -59,9 +59,9 @@ class NearbyViewController: UIViewController {
     func getVisibleMonuments(mapView: MKMapView) -> [Monument] {
         return mapView
             .annotations(in: mapView.visibleMapRect)
-            .flatMap { ($0 as? CCHMapClusterAnnotation)?.annotations as? Set<MonumentAnnotation> }
+            .compactMap { ($0 as? CCHMapClusterAnnotation)?.annotations as? Set<MonumentAnnotation> }
             .flatMap { $0 }
-            .flatMap { $0.monument }
+            .compactMap { $0.monument }
     }
 
 }
